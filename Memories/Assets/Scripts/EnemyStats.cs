@@ -1,0 +1,11 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyStats : MonoBehaviour
+{
+    [Header("Характеристики врага")]
+    public float HP;
+    
+    
+}
