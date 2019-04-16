@@ -73,6 +73,7 @@ public abstract class PlayerBase : MonoBehaviour
     public void Move()
 	{
 		transform.Translate(direction * Speed * Time.deltaTime);
+        //rb.velocity = direction * Speed * Time.deltaTime;
         //rb.AddForce(direction * Speed * Time.deltaTime);
 		if (direction.x != 0 || direction.y != 0) {
 			AnimationMove (direction);

@@ -7,43 +7,45 @@ public class EnemyFollow : MonoBehaviour
     public Transform target;
     private Vector2 startPos;
     public float speed;
-    public float stopRange;
-    public bool follow;
+    [Range(0,3)]
+    public float seeDistance;
+    [Range(0,1)]
+    public float attackDistance;
+    bool attacking=false;
 
     void Start()
     {
-        startPos = new Vector2(transform.position.x, transform.position.y);
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();    
+        startPos = new Vector2(transform.position.x, transform.position.y);    
     }
 
     void Update()
     {
-        if (follow)
+        if (Vector2.Distance (transform.position, target.transform.position) < seeDistance) 
         {
-            if (Vector2.Distance(transform.position, target.position) > stopRange)
+            if (Vector2.Distance (transform.position, target.transform.position) > attackDistance)
             {
+                attacking=false;
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            } else {
+                attacking=true;
+                Invoke("Attacking", 0.5f);
             }
-        }
-        else 
-        {
+        } else {
             transform.position = Vector2.MoveTowards(transform.position, startPos, speed * Time.deltaTime);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    void Attacking()
     {
-        if (other.CompareTag("Player"))
-        {
-            follow = true;
-        }
+        if (attacking)
+            Debug.Log("Attack");
     }
 
-    private void OnTriggerExit2D(Collider2D other) 
+    public void OnDrawGizmosSelected() 
     {
-        if (other.CompareTag("Player"))
-        {
-            follow = false;
-        }
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, seeDistance);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackDistance);
     }
 }
