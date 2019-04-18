@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public Transform target;
+    private SpriteRenderer sr;
+    private Animator anim;
+    private Transform target;
     private Vector2 startPos;
     public float speed;
     [Range(0,3)]
@@ -15,13 +17,22 @@ public class EnemyFollow : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         startPos = new Vector2(transform.position.x, transform.position.y);    
     }
 
     void Update()
     {
+        Following();
+    }
+
+    void Following()
+    {
         if (Vector2.Distance (transform.position, target.transform.position) < seeDistance) 
         {
+            Running();
             if (Vector2.Distance (transform.position, target.transform.position) > attackDistance)
             {
                 attacking=false;
@@ -31,7 +42,18 @@ public class EnemyFollow : MonoBehaviour
                 Invoke("Attacking", 0.5f);
             }
         } else {
+            if (startPos.x < transform.position.x)
+            {
+                sr.flipX=true;
+            } else {
+                sr.flipX=false;
+            }
             transform.position = Vector2.MoveTowards(transform.position, startPos, speed * Time.deltaTime);
+        }
+
+        if (transform.position.x == startPos.x && transform.position.y == startPos.y)
+        {
+            anim.SetBool("Running", false);
         }
     }
 
@@ -39,6 +61,17 @@ public class EnemyFollow : MonoBehaviour
     {
         if (attacking)
             Debug.Log("Attack");
+    }
+
+    void Running()
+    {
+        anim.SetBool("Running", true);
+        if (target.position.x < transform.position.x)
+        {
+            sr.flipX=true;
+        } else {
+            sr.flipX=false;
+        }
     }
 
     public void OnDrawGizmosSelected() 
