@@ -373,6 +373,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4230151718699239679, guid: 26236647e07a12848b7c99acf5f52e09,
+        type: 3}
+      propertyPath: speed
+      value: 1.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26236647e07a12848b7c99acf5f52e09, type: 3}
 --- !u!1 &1601504023
@@ -480,7 +485,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   attackRange: 0.3
-  damage: 10
+  damage: 50
 --- !u!95 &1601504027
 Animator:
   serializedVersion: 3
@@ -909,5 +914,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1601504025}
+    - target: {fileID: 4230151718699239679, guid: 26236647e07a12848b7c99acf5f52e09,
+        type: 3}
+      propertyPath: startWaitTime2
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26236647e07a12848b7c99acf5f52e09, type: 3}

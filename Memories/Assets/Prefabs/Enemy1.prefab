@@ -178,3 +178,5 @@ MonoBehaviour:
   speed: 1.8
   seeDistance: 2.2
   attackDistance: 0.7
+  startWaitTime: 3
+  startWaitTime2: 2

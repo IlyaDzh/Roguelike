@@ -7,20 +7,21 @@ public class EnemyFollow : MonoBehaviour
     private SpriteRenderer sr;
     private Animator anim;
     private Transform target;
-    private Vector2 startPos;
     public float speed;
     [Range(0,3)]
     public float seeDistance;
     [Range(0,1)]
     public float attackDistance;
-    bool attacking=false;
+    private float waitTime, waitTime2;
+    public float startWaitTime, startWaitTime2;
+    private bool runToRandom=false;
+    private float rndX, rndY;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        startPos = new Vector2(transform.position.x, transform.position.y);    
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();   
     }
 
     void Update()
@@ -32,41 +33,49 @@ public class EnemyFollow : MonoBehaviour
     {
         if (Vector2.Distance (transform.position, target.transform.position) < seeDistance) 
         {
-            Running();
+            anim.SetBool("Running", true);
+            runToRandom=false;
+            waitTime=1;
+            speed = 1.8f;
+            FlipX(target.position.x);
             if (Vector2.Distance (transform.position, target.transform.position) > attackDistance)
             {
-                attacking=false;
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             } else {
-                attacking=true;
-                Invoke("Attacking", 0.5f);
+                Debug.Log("Attack");
             }
         } else {
-            if (startPos.x < transform.position.x)
+            speed = 1.2f;
+            if (waitTime <= 0)
             {
-                sr.flipX=true;
+                rndX= Random.Range(-10f, 10f);
+                rndY= Random.Range(-10f, 10f);
+                FlipX(rndX);
+                runToRandom=true;
+                waitTime=startWaitTime;
             } else {
-                sr.flipX=false;
+                waitTime -= Time.deltaTime;
             }
-            transform.position = Vector2.MoveTowards(transform.position, startPos, speed * Time.deltaTime);
         }
 
-        if (transform.position.x == startPos.x && transform.position.y == startPos.y)
+        if (runToRandom)
         {
-            anim.SetBool("Running", false);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2 (rndX, rndY), speed * Time.deltaTime);
+            anim.SetBool("Running", true);
+            if (waitTime2 <= 0)
+            {
+                anim.SetBool("Running", false);
+                runToRandom=false;
+                waitTime2=startWaitTime2;
+            } else {
+                waitTime2 -= Time.deltaTime;
+            }
         }
     }
 
-    void Attacking()
+    void FlipX(float other)
     {
-        if (attacking)
-            Debug.Log("Attack");
-    }
-
-    void Running()
-    {
-        anim.SetBool("Running", true);
-        if (target.position.x < transform.position.x)
+        if (other < transform.position.x)
         {
             sr.flipX=true;
         } else {
