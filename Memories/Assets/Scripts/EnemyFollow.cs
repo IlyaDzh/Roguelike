@@ -45,6 +45,7 @@ public class EnemyFollow : MonoBehaviour
                 Debug.Log("Attack");
             }
         } else {
+            anim.SetBool("Running", false);
             speed = 1.2f;
             if (waitTime <= 0)
             {
