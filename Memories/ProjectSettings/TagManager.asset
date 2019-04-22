@@ -8,6 +8,8 @@ TagManager:
   - Rooms
   - SpawnPoint
   - Spike
+  - Jar
+  - areaDamage
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ public class Sword : PlayerBase
         Attack();
     }
 
-    public override void Attack()
+    protected override void Attack()
     {
         if (timeBtwAttack <= 0)
         {
@@ -37,7 +37,7 @@ public class Sword : PlayerBase
         }
     }
 
-    public void OnDrawGizmosSelected() 
+    void OnDrawGizmosSelected() 
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoss.position, attackRange);

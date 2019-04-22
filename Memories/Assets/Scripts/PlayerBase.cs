@@ -12,13 +12,13 @@ public abstract class PlayerBase : MonoBehaviour
 	private Animator animator;
     private Rigidbody2D rb;
 
-    public void Start () 
+    void Start () 
 	{
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-	public void TakeInput()
+	protected void TakeInput()
 	{
         direction = Vector2.zero;
         if (Input.GetKey (KeyCode.W)) 
@@ -70,7 +70,7 @@ public abstract class PlayerBase : MonoBehaviour
         }
     }
 
-    public void Move()
+    protected void Move()
 	{
 		transform.Translate(direction * Speed * Time.deltaTime);
         //rb.velocity = direction * Speed * Time.deltaTime;
@@ -82,12 +82,20 @@ public abstract class PlayerBase : MonoBehaviour
 		}
 	}
 
-	public void AnimationMove(Vector2 direction)
+	void AnimationMove(Vector2 direction)
 	{
 		animator.SetLayerWeight (1, 1);
 		animator.SetFloat ("x", direction.x);
 		animator.SetFloat ("y", direction.y);
 	}
 
-    public abstract void Attack();
+    void CheckDeath()
+    {
+        //Если хп < 0
+        //Проиграть анимацию смерти
+        //Звук смерти
+        //Вуы
+    }
+
+    protected abstract void Attack();
 }
