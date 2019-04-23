@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4230151718699239650}
   - component: {fileID: 4230151718699239677}
   - component: {fileID: 4230151718699239676}
-  - component: {fileID: 4230151718699239679}
+  - component: {fileID: 7315820575655077430}
   m_Layer: 8
   m_Name: Enemy1
   m_TagString: Enemy
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
---- !u!114 &4230151718699239679
+--- !u!114 &7315820575655077430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,11 +172,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4230151718699239675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68d812231dccd94da8311feb023aa5e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfcedaf35de15eb4ca2274b826212e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.8
   seeDistance: 2.2
-  attackDistance: 0.7
+  attackDistance: 0.8
   startWaitTime: 3
   startWaitTime2: 2

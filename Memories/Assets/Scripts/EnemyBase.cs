@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
+public abstract class EnemyBase : MonoBehaviour
 {
     private SpriteRenderer sr;
     private Animator anim;
@@ -24,12 +24,7 @@ public class EnemyFollow : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();   
     }
 
-    void Update()
-    {
-        Following();
-    }
-
-    void Following()
+    protected void Following()
     {
         if (Vector2.Distance (transform.position, target.transform.position) < seeDistance) 
         {
@@ -84,7 +79,9 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
-    public void OnDrawGizmosSelected() 
+    protected abstract void Attack();
+
+    void OnDrawGizmosSelected() 
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, seeDistance);
