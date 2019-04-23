@@ -24,7 +24,7 @@ public abstract class EnemyBase : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();   
     }
 
-    protected void Following()
+    protected virtual void Following()
     {
         if (Vector2.Distance (transform.position, target.transform.position) < seeDistance) 
         {
