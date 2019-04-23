@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Boss : EnemyBase
 {
+    void Update() 
+    {
+        Following();
+    }
+
     protected override void Attack()
     {
         //особая атака
