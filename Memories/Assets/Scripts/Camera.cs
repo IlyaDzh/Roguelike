@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     public float smoothing;
     public Vector3 offset;
 
+    void Start() 
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); 
+    }
     void FixedUpdate()
     {
         if (player!=null)

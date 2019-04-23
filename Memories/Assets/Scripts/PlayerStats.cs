@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats playerStats;
-    public GameObject player;
     [Header("Характеристики героя")]
     public float HP;
     public float maxHP;
