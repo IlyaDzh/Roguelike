@@ -91,9 +91,7 @@ public abstract class PlayerBase : MonoBehaviour
 
     void CheckDeath()
     {
-        //Если хп < 0
-        //Проиграть анимацию смерти
-        //Звук смерти
+        
     }
 
     protected abstract void Attack();
