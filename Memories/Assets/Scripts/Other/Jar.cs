@@ -24,6 +24,7 @@ public class Jar : MonoBehaviour
         {
             GetComponent<Animator>().enabled = true;
             GetComponent<AudioSource>().Play();
+            Destroy(other.gameObject);
             Destroy(this);
         }
     }
