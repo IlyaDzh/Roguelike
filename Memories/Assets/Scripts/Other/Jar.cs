@@ -20,6 +20,12 @@ public class Jar : MonoBehaviour
     {
         if (other.tag == "areaDamage")
             crash = true;
+        if (other.tag == "Bullet")
+        {
+            GetComponent<Animator>().enabled = true;
+            GetComponent<AudioSource>().Play();
+            Destroy(this);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other) 

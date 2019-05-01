@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2900764081529536217}
   - component: {fileID: 2900764081529536221}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Sword
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,9 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728ae1fb71245f1498804c591adbd8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2900764081529536208}
   HP: 0
-  maxHP: 100
+  maxHP: 150
 --- !u!114 &2900764081529536221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,9 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
-  attackPos: {fileID: 2900764082396187853}
   startTimeBtwAttack: 0.2
-  attackPoss: {fileID: 2900764082396187853}
+  attackPos: {fileID: 2900764082396187853}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 256

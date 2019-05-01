@@ -10,6 +10,7 @@ TagManager:
   - Spike
   - Jar
   - areaDamage
+  - Bullet
   layers:
   - Default
   - TransparentFX
