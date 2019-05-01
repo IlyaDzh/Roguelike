@@ -80,7 +80,7 @@ public class Sword : PlayerBase
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    enemiesToDamage[i].GetComponent<EnemyStats>().HP -= damage;
+                    enemiesToDamage[i].GetComponent<EnemyBase>().HP -= damage;
                 }
                 timeBtwAttack = startTimeBtwAttack;
             }

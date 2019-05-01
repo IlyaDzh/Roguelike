@@ -16,6 +16,18 @@ public abstract class EnemyBase : MonoBehaviour
     public float startWaitTime, startWaitTime2;
     private bool runToRandom=false;
     private float rndX, rndY;
+    [Header("Характеристики врага")]
+    public float HP;
+    public GameObject coins;
+
+    protected void CheckDeath()
+    {
+        if (HP<=0)
+        {
+            Instantiate(coins, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
