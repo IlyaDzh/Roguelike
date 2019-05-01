@@ -5,8 +5,8 @@ using UnityEngine;
 public class Wizard : PlayerBase
 {
     public GameObject projectile;
-    public float minDamage;
-    public float maxDamage;
+    public int minDamage;
+    public int maxDamage;
     public float projectileForce;
 
     void Update ()
@@ -18,7 +18,7 @@ public class Wizard : PlayerBase
 
     protected override void Attack()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
             GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
             Vector2 mousePos = UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);

@@ -69,14 +69,4 @@ public abstract class PlayerBase : MonoBehaviour
 	}
 
     protected abstract void Attack();
-
-    protected void DealDamage()
-    {
-
-    }
-
-    protected void TakeDamage()
-    {
-        
-    }
 }
