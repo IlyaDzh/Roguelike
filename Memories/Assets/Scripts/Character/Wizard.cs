@@ -24,8 +24,7 @@ public class Wizard : PlayerBase
             Vector2 mousePos = UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 myPos = transform.position;
             Vector2 direction = (mousePos - myPos).normalized;
-            var angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg; //
-            GameObject spell = Instantiate(projectile, transform.position, Quaternion.AngleAxis(angle, Vector3.forward)); //
+            GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
             spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
             spell.GetComponent<Projectile>().damage = Random.Range(minDamage, maxDamage);
         }

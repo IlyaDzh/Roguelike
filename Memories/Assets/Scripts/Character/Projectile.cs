@@ -6,6 +6,13 @@ public class Projectile : MonoBehaviour
 {
     [HideInInspector]
     public int damage;
+    public Transform ukaz;
+
+    void Start() 
+    {
+        ukaz = GetComponent<Transform>();
+        transform.rotation = ukaz.transform.rotation;
+    }
 
     void OnTriggerEnter2D(Collider2D other) 
     {

@@ -11,12 +11,12 @@ public abstract class PlayerBase : MonoBehaviour
 	private Animator animator;
     private Rigidbody2D rb;
 
-    void Start () 
-	{
+    void Start() 
+    {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
-
+    
 	protected virtual void TakeInput()
 	{
         direction = Vector2.zero;
