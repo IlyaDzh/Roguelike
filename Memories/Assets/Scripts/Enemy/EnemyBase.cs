@@ -20,15 +20,6 @@ public abstract class EnemyBase : MonoBehaviour
     public float HP;
     public GameObject coins;
 
-    protected void CheckDeath()
-    {
-        if (HP<=0)
-        {
-            Instantiate(coins, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
-    }
-
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -101,8 +92,17 @@ public abstract class EnemyBase : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackDistance);
     }
 
-    protected void TakeDamage()
+    public void TakeDamage(int damage)
     {
+        HP -= damage;
+    }
 
+    protected void CheckDeath()
+    {
+        if (HP<=0)
+        {
+            Instantiate(coins, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }
