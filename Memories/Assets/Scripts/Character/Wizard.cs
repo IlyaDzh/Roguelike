@@ -19,8 +19,7 @@ public class Wizard : PlayerBase
     protected override void Attack()
     {
         if (Input.GetMouseButtonDown(0))
-        {
-            
+        { 
             Vector2 mousePos = UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 myPos = transform.position;
             Vector2 direction = (mousePos - myPos).normalized;

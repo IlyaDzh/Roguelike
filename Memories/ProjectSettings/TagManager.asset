@@ -11,6 +11,7 @@ TagManager:
   - Jar
   - areaDamage
   - Bullet
+  - Ukaz
   layers:
   - Default
   - TransparentFX

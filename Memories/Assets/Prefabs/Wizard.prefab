@@ -181,4 +181,4 @@ MonoBehaviour:
     type: 3}
   minDamage: 30
   maxDamage: 55
-  projectileForce: 2
+  projectileForce: 6

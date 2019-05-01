@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
 
     void Start() 
     {
-        ukaz = GetComponent<Transform>();
+        ukaz = GameObject.FindGameObjectWithTag("Ukaz").GetComponent<Transform>(); 
         transform.rotation = ukaz.transform.rotation;
     }
 
