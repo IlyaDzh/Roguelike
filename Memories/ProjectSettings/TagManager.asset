@@ -11,7 +11,6 @@ TagManager:
   - Jar
   - areaDamage
   - Bullet
-  - Ukaz
   - Wall
   layers:
   - Default

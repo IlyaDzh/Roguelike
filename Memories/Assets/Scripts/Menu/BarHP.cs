@@ -10,6 +10,7 @@ public class BarHP : MonoBehaviour
     void Start()
     {
         sl = GetComponent<Slider>();
+        sl.maxValue = PlayerStats.HP;
     }
 
     void Update()

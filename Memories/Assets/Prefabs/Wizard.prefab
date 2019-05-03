@@ -162,7 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728ae1fb71245f1498804c591adbd8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
   maxHP: 100
 --- !u!114 &2102850997
 MonoBehaviour:
@@ -177,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
-  projectile: {fileID: 6842154149032406971, guid: 14a5cb9497c5b3146ac8f4d8dab2d3c6,
+  projectile: {fileID: 8859696986503568722, guid: 042b69436e2ccaa499549adbd3c9df55,
     type: 3}
   minDamage: 30
   maxDamage: 55
