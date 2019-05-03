@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats playerStats;
     [Header("Характеристики героя")]
-    public float HP;
+    public static float HP;
     public float maxHP;
 
     void Awake()

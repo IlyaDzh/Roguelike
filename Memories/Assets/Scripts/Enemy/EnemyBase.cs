@@ -19,6 +19,7 @@ public abstract class EnemyBase : MonoBehaviour
     [Header("Характеристики врага")]
     public float HP;
     public GameObject coins;
+    public float damage;
 
     void Start()
     {
@@ -36,12 +37,7 @@ public abstract class EnemyBase : MonoBehaviour
             waitTime=1;
             speed = 1.8f;
             FlipX(target.position.x);
-            if (Vector2.Distance (transform.position, target.transform.position) > attackDistance)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-            } else {
-                Debug.Log("Attack");
-            }
+            Attack();
         } else {
             anim.SetBool("Running", false);
             speed = 1.2f;
@@ -82,7 +78,15 @@ public abstract class EnemyBase : MonoBehaviour
         }
     }
 
-    protected abstract void Attack();
+    protected virtual void Attack()
+    {
+        if (Vector2.Distance (transform.position, target.transform.position) > attackDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        } else {
+            PlayerStats.HP -= damage;
+        }
+    }
 
     void OnDrawGizmosSelected() 
     {

@@ -7,6 +7,7 @@ public class Boss : EnemyBase
     void Update() 
     {
         Following();
+        CheckDeath();
     }
 
     protected override void Attack()

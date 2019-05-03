@@ -9,9 +9,4 @@ public class MeleeEnemy : EnemyBase
         Following();
         CheckDeath();
     }
-
-    protected override void Attack()
-    {
-        //ближняя атака
-    }
 }

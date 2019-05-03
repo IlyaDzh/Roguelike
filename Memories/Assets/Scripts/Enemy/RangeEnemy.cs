@@ -7,10 +7,6 @@ public class RangeEnemy : EnemyBase
     void Update()
     {
         Following();
-    }
-
-    protected override void Attack()
-    {
-        //дальняя атака
+        CheckDeath();
     }
 }
