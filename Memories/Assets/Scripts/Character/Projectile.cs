@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     [HideInInspector]
     public int damage;
-    public Transform ukaz;
+    private Transform ukaz;
 
     void Start() 
     {
@@ -19,6 +19,10 @@ public class Projectile : MonoBehaviour
         if (other.tag == "Enemy")
         {
             other.GetComponent<EnemyBase>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
+        if (other.tag == "Wall")
+        {
             Destroy(gameObject);
         }
     } 

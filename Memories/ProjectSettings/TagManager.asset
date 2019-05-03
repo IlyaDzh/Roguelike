@@ -12,6 +12,7 @@ TagManager:
   - areaDamage
   - Bullet
   - Ukaz
+  - Wall
   layers:
   - Default
   - TransparentFX

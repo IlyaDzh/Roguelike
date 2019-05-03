@@ -8,7 +8,7 @@ public abstract class EnemyBase : MonoBehaviour
     private Animator anim;
     private Transform target;
     public float speed;
-    [Range(0,3)]
+    [Range(0,4)]
     public float seeDistance;
     [Range(0,1)]
     public float attackDistance;
