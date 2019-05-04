@@ -7,6 +7,6 @@ public class MeleeEnemy : EnemyBase
     void Update()
     {
         Following();
-        CheckDeath();
+        CheckDeath(3);
     }
 }

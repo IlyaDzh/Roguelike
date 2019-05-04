@@ -20,7 +20,6 @@ public abstract class EnemyBase : MonoBehaviour
     private bool runToRandom=false;
     private float rndX, rndY;
     public GameObject damageText;
-    public GameObject coins;
     
 
     void Start()
@@ -109,11 +108,13 @@ public abstract class EnemyBase : MonoBehaviour
         Instantiate(damageText, transform.position, Quaternion.identity);
     }
 
-    protected void CheckDeath()
+    protected void CheckDeath(int maxDrop)
     {
         if (HP<=0)
         {
-            Instantiate(coins, transform.position, Quaternion.identity);
+            int numberDrop = Random.Range(0, maxDrop);
+            GameObject drop = GameObject.Find("GOManager").GetComponent<GOManager>().drop[numberDrop];
+            Instantiate(drop, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

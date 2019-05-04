@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public abstract class PlayerBase : MonoBehaviour
 {
-    public Text txt;
     [Header("Характеристика героя")]
     public float Speed;
     protected int damage;
@@ -14,11 +13,13 @@ public abstract class PlayerBase : MonoBehaviour
     protected Vector2 direction;
 	private Animator animator;
     private Rigidbody2D rb;
+    private Text txt;
 
     void Start() 
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        txt = GameObject.Find("NumberCoins").GetComponent<Text>();   
     }
     
 	protected virtual void TakeInput()
