@@ -161,11 +161,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcedaf35de15eb4ca2274b826212e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 100
   speed: 1.8
+  damage: 0.05
   seeDistance: 3.1
   attackDistance: 0.9
   startWaitTime: 3
   startWaitTime2: 2
-  HP: 100
+  damageText: {fileID: 1044934030791041467, guid: 8b8c7089409d66942bc274501b77000f,
+    type: 3}
   coins: {fileID: 8966619657212378614, guid: 46fd294ea9133c44bbb2a8fdf7bc3c37, type: 3}
-  damage: 0.05

@@ -10,7 +10,9 @@ public class Sword : PlayerBase
     public LayerMask whatIsEnemies;
     [Range(0,1)]
     public float attackRange;
-    public int damage;
+    private int damage;
+    public int minDamage;
+    public int maxDamage;
 
     void Update ()
 	{
@@ -77,9 +79,11 @@ public class Sword : PlayerBase
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                damage = Random.Range(minDamage, maxDamage);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
+                    enemiesToDamage[i].GetComponent<EnemyBase>().ShowDamage(damage);
                     enemiesToDamage[i].GetComponent<EnemyBase>().TakeDamage(damage);
                 }
                 timeBtwAttack = startTimeBtwAttack;

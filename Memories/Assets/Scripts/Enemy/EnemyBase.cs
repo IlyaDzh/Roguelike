@@ -7,7 +7,10 @@ public abstract class EnemyBase : MonoBehaviour
     private SpriteRenderer sr;
     private Animator anim;
     private Transform target;
+    [Header("Характеристики врага")]
+    public float HP;
     public float speed;
+    public float damage;
     [Range(0,4)]
     public float seeDistance;
     [Range(0,1)]
@@ -16,10 +19,9 @@ public abstract class EnemyBase : MonoBehaviour
     public float startWaitTime, startWaitTime2;
     private bool runToRandom=false;
     private float rndX, rndY;
-    [Header("Характеристики врага")]
-    public float HP;
+    public GameObject damageText;
     public GameObject coins;
-    public float damage;
+    
 
     void Start()
     {
@@ -99,6 +101,12 @@ public abstract class EnemyBase : MonoBehaviour
     public void TakeDamage(int damage)
     {
         HP -= damage;
+    }
+
+    public void ShowDamage(int damage)
+    {
+        damageText.GetComponent<TextMesh>().text = "-" + damage;
+        Instantiate(damageText, transform.position, Quaternion.identity);
     }
 
     protected void CheckDeath()

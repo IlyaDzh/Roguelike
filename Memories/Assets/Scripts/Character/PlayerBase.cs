@@ -4,9 +4,8 @@ using UnityEngine;
 
 public abstract class PlayerBase : MonoBehaviour
 {
-    [Header("Движение")]
+    [Header("Характеристика героя")]
     public float Speed;
-    [Header("Атака")]
     protected Vector2 direction;
 	private Animator animator;
     private Rigidbody2D rb;
