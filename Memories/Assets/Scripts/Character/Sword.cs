@@ -10,9 +10,6 @@ public class Sword : PlayerBase
     public LayerMask whatIsEnemies;
     [Range(0,1)]
     public float attackRange;
-    private int damage;
-    public int minDamage;
-    public int maxDamage;
 
     void Update ()
 	{

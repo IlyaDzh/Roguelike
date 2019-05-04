@@ -6,6 +6,9 @@ public abstract class PlayerBase : MonoBehaviour
 {
     [Header("Характеристика героя")]
     public float Speed;
+    protected int damage;
+    public int minDamage;
+    public int maxDamage;
     protected Vector2 direction;
 	private Animator animator;
     private Rigidbody2D rb;

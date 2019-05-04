@@ -5,8 +5,6 @@ using UnityEngine;
 public class Wizard : PlayerBase
 {
     private GameObject projectile;
-    public int minDamage;
-    public int maxDamage;
     public float projectileForce;
     public int numberBullet;
 
