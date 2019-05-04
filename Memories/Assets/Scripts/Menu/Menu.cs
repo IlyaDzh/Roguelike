@@ -1,10 +1,15 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public GameObject loadingScreen;
+    public GameObject hero;
+    public Slider slider;
+    public Text loadingText;
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -28,6 +33,26 @@ public class Menu : MonoBehaviour
     public void ChooseWizard()
     {
         Character.numberChooseHero = 3;
+    }
+
+    public void LoadLevel()
+    {
+        StartCoroutine(LoadAsynchronously());
+    }
+
+    IEnumerator LoadAsynchronously ()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        hero.SetActive(false);
+        loadingScreen.SetActive(true);
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            slider.value = progress;
+            loadingText.text = progress * 100f + "%";
+
+            yield return null;
+        }
     }
 
 }
