@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class PlayerBase : MonoBehaviour
 {
+    public Text txt;
     [Header("Характеристика героя")]
     public float Speed;
     protected int damage;
@@ -69,6 +71,16 @@ public abstract class PlayerBase : MonoBehaviour
 		animator.SetFloat ("x", direction.x);
 		animator.SetFloat ("y", direction.y);
 	}
+
+    void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.tag == "Coin")
+        {
+            PlayerStats.coins += other.GetComponent<Coins>().money;
+            txt.text = PlayerStats.coins.ToString();
+            Destroy(other.gameObject);
+        }
+    }
 
     protected abstract void Attack();
 }

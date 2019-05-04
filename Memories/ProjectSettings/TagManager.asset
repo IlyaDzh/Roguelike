@@ -12,6 +12,7 @@ TagManager:
   - areaDamage
   - Bullet
   - Wall
+  - Coin
   layers:
   - Default
   - TransparentFX

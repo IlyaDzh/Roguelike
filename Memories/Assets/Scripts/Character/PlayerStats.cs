@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     [Header("Характеристики героя")]
     public static float HP;
     public float maxHP;
+    public static int coins;
 
     void Awake()
     {
