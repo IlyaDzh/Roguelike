@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 456310073969339494}
   - component: {fileID: 456310073969339514}
   - component: {fileID: 456310073969339515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jar1
   m_TagString: Jar
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300004, guid: 3b6f9f8e42f14a94ba5eedf49566e944, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c298686a9f51157468a22afe5fcf89fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crash: 0
 --- !u!82 &456310073969339515
 AudioSource:
   m_ObjectHideFlags: 0

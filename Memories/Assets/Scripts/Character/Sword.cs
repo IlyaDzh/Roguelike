@@ -80,8 +80,14 @@ public class Sword : PlayerBase
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    enemiesToDamage[i].GetComponent<EnemyBase>().ShowDamage(damage);
-                    enemiesToDamage[i].GetComponent<EnemyBase>().TakeDamage(damage);
+                    if (enemiesToDamage[i].tag == "Jar") 
+                    {
+                        if (enemiesToDamage[i].GetComponent<Jar>())
+                            enemiesToDamage[i].GetComponent<Jar>().crash = true;
+                    } else {
+                        enemiesToDamage[i].GetComponent<EnemyBase>().ShowDamage(damage);
+                        enemiesToDamage[i].GetComponent<EnemyBase>().TakeDamage(damage);
+                    }
                 }
                 timeBtwAttack = startTimeBtwAttack;
             }

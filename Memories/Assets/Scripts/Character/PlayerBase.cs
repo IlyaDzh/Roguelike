@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public abstract class PlayerBase : MonoBehaviour
 {
+    public GameObject coinText;
     [Header("Характеристика героя")]
     public float Speed;
     protected int damage;
@@ -77,9 +78,13 @@ public abstract class PlayerBase : MonoBehaviour
     {
         if(other.tag == "Coin")
         {
-            PlayerStats.coins += other.GetComponent<Coins>().money;
+            int money = other.GetComponent<Coins>().money;
+            PlayerStats.coins += money;
+            coinText.GetComponent<TextMesh>().text = "+" + money.ToString();
+            Instantiate(coinText, other.transform.position, Quaternion.identity);
             txt.text = PlayerStats.coins.ToString();
-            Destroy(other.gameObject);
+
+            Destroy(other.gameObject);            
         }
     }
 

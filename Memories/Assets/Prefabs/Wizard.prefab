@@ -175,6 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38c69a38adf2a1419dec5a3632fa78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinText: {fileID: 1044934030791041467, guid: d0a62ef7f8f586645a9caef237e1db95,
+    type: 3}
   Speed: 3
   minDamage: 30
   maxDamage: 55

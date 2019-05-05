@@ -9,7 +9,6 @@ TagManager:
   - SpawnPoint
   - Spike
   - Jar
-  - areaDamage
   - Bullet
   - Wall
   - Coin
