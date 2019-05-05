@@ -7,6 +7,8 @@ public class RangeEnemy : EnemyBase
     void Update()
     {
         Following();
-        CheckDeath(4);
+        CheckDeath();
     }
+
+    //Переопределить дальнюю атаку
 }

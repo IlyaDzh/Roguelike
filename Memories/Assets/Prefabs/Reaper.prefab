@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4230151718699239677}
   - component: {fileID: 7315820575655077430}
   m_Layer: 8
-  m_Name: Enemy1
+  m_Name: Reaper
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,13 +71,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300004, guid: c385fedf32c7a704f937eb61b9afa5ff, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300014, guid: d5764cbcf0b2a5e4b821cfafccc2c71a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.34375, y: 0.46875}
+  m_Size: {x: 0.78125, y: 0.9375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 4230151718699239675}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e51a0fc61a493d044b5fceb47d6d44f4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2eb86552464367748a12b8a5b184e33f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -115,18 +115,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013225734, y: -0.0012720823}
+  m_Offset: {x: 0.059869945, y: -0.09190911}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.34375, y: 0.46875}
-    newSize: {x: 0.34375, y: 0.46875}
+    oldSize: {x: 0.78125, y: 0.9375}
+    newSize: {x: 0.78125, y: 0.9375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3513075, y: 0.46620584}
+  m_Size: {x: 0.42732704, y: 0.741042}
   m_EdgeRadius: 0
 --- !u!50 &4230151718699239677
 Rigidbody2D:
@@ -161,13 +161,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcedaf35de15eb4ca2274b826212e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
-  speed: 1.8
+  HP: 150
+  speed: 1.4
   damage: 0.05
   seeDistance: 3.1
   attackDistance: 0.9
   startWaitTime: 3
   startWaitTime2: 2
+  maxDrop: 4
   damageText: {fileID: 1044934030791041467, guid: 8b8c7089409d66942bc274501b77000f,
     type: 3}
-  coins: {fileID: 8966619657212378614, guid: 46fd294ea9133c44bbb2a8fdf7bc3c37, type: 3}

@@ -19,6 +19,7 @@ public abstract class EnemyBase : MonoBehaviour
     public float startWaitTime, startWaitTime2;
     private bool runToRandom=false;
     private float rndX, rndY;
+    public int maxDrop;
     public GameObject damageText;
     
 
@@ -44,8 +45,8 @@ public abstract class EnemyBase : MonoBehaviour
             speed = 1.2f;
             if (waitTime <= 0)
             {
-                rndX= Random.Range(-10f, 10f);
-                rndY= Random.Range(-10f, 10f);
+                rndX= Random.Range(transform.position.x-5f, transform.position.x+5f);
+                rndY= Random.Range(transform.position.y-5f, transform.position.y+5f);
                 FlipX(rndX);
                 runToRandom=true;
                 waitTime=startWaitTime;
@@ -108,7 +109,7 @@ public abstract class EnemyBase : MonoBehaviour
         Instantiate(damageText, transform.position, Quaternion.identity);
     }
 
-    protected void CheckDeath(int maxDrop)
+    protected void CheckDeath()
     {
         if (HP<=0)
         {
