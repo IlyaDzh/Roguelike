@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class EnemyBase : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public abstract class EnemyBase : MonoBehaviour
     public int maxDrop;
     public GameObject damageText;
     public GameObject explosion;
+    public Slider sl;
     
 
     void Start()
@@ -29,6 +31,8 @@ public abstract class EnemyBase : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();   
+        sl.maxValue = HP;
+        sl.value = HP;
     }
 
     protected virtual void Following()
@@ -102,6 +106,7 @@ public abstract class EnemyBase : MonoBehaviour
     public void TakeDamage(int damage)
     {
         HP -= damage;
+        sl.value = HP;
     }
 
     public void ShowDamage(int damage)
