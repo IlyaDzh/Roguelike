@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
     public GameObject hint;
+    public GameObject death;
 
     void Start() 
     {
@@ -19,7 +21,18 @@ public class StartGame : MonoBehaviour
         {
             hint.SetActive(false);
             Time.timeScale=1;
-            Destroy(this);
         }
+        if (PlayerStats.HP <= 0 && !PlayerStats.death)
+        {
+            GameObject.FindGameObjectWithTag("Player").SetActive(false);
+            GetComponent<AudioSource>().Play();
+            death.SetActive(true);
+            PlayerStats.death = true;
+        }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

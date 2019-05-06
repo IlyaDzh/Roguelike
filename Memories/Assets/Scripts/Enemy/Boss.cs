@@ -17,6 +17,6 @@ public class Boss : EnemyBase
 
     protected override void Following()
     {
-        //особое движение
+        
     }
 }

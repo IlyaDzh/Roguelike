@@ -12,9 +12,9 @@ public abstract class EnemyBase : MonoBehaviour
     public float HP;
     public float speed;
     public float damage;
-    [Range(0,4)]
+    [Range(0,5)]
     public float seeDistance;
-    [Range(0,1)]
+    [Range(0,5)]
     public float attackDistance;
     private float waitTime, waitTime2;
     public float startWaitTime, startWaitTime2;

@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
     public static float HP;
     public float maxHP;
     public static int coins;
+    public static bool death;
 
     void Awake()
     {
