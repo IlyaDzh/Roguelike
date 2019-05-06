@@ -171,3 +171,5 @@ MonoBehaviour:
   maxDrop: 3
   damageText: {fileID: 1044934030791041467, guid: 8b8c7089409d66942bc274501b77000f,
     type: 3}
+  explosion: {fileID: 8182012338412774326, guid: 2d88d3c12e392ef4ba56f52ae22b9a65,
+    type: 3}

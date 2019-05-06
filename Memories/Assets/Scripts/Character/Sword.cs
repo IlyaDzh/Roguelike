@@ -10,6 +10,7 @@ public class Sword : PlayerBase
     public LayerMask whatIsEnemies;
     [Range(0,1)]
     public float attackRange;
+    public GameObject hit;
 
     void Update ()
 	{
@@ -80,6 +81,7 @@ public class Sword : PlayerBase
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
+                    hitEffect();
                     if (enemiesToDamage[i].tag == "Jar") 
                     {
                         if (enemiesToDamage[i].GetComponent<Jar>())
@@ -94,6 +96,12 @@ public class Sword : PlayerBase
         } else {
             timeBtwAttack -= Time.deltaTime;
         }
+    }
+
+    void hitEffect()
+    {
+        //Инвертировать эффект если влево/вправо
+        Destroy(Instantiate(hit, attackPos.position, Quaternion.identity), 0.75f);
     }
 
     void OnDrawGizmosSelected() 

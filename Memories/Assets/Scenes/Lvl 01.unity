@@ -2172,7 +2172,7 @@ MonoBehaviour:
     type: 3}
   rooms: []
   waitTime: 4
-  boss: {fileID: 5216794337661010865, guid: 26aa33b0d3653bc4f8c156c9e6147c4e, type: 3}
+  boss: {fileID: 8664162266619200222, guid: d1bf61460eb04a14dbae425f22614f6d, type: 3}
 --- !u!4 &2121224640
 Transform:
   m_ObjectHideFlags: 0

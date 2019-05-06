@@ -21,6 +21,7 @@ public abstract class EnemyBase : MonoBehaviour
     private float rndX, rndY;
     public int maxDrop;
     public GameObject damageText;
+    public GameObject explosion;
     
 
     void Start()
@@ -113,6 +114,7 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (HP<=0)
         {
+            Destroy(Instantiate(explosion, transform.position, Quaternion.identity), 0.45f);
             int numberDrop = Random.Range(0, maxDrop);
             GameObject drop = GameObject.Find("GOManager").GetComponent<GOManager>().drop[numberDrop];
             Instantiate(drop, transform.position, Quaternion.identity);
