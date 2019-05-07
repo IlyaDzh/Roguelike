@@ -11,12 +11,14 @@ public class Sword : PlayerBase
     [Range(0,1)]
     public float attackRange;
     public GameObject hit;
+    public float energy;
 
     void Update ()
 	{
 		TakeInput ();
 		Move ();
         Attack();
+        Energy();
     }
 
     protected override void TakeInput()
@@ -95,6 +97,30 @@ public class Sword : PlayerBase
             }
         } else {
             timeBtwAttack -= Time.deltaTime;
+        }
+    }
+
+    void Energy()
+    {
+        if (energy > 10 && Input.GetKey(KeyCode.Space))
+        {
+            energy -= 0.5f;
+            Speed = 3.5f;
+        } else {
+            energy += 0.5f;
+            Speed = 2.5f;
+        }
+        if (energy >= 100)
+        {
+            energy = 100;
+        }
+        if (energy <= 0)
+        {
+            energy = 0;
+        }
+        if (energy == 10 && Input.GetKey(KeyCode.Space))
+        {
+            energy = 0;
         }
     }
 

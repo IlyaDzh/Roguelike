@@ -188,6 +188,7 @@ MonoBehaviour:
     m_Bits: 256
   attackRange: 0.4
   hit: {fileID: 85534321437129453, guid: d9f3dd14eb421c547b44a04dc412c4cd, type: 3}
+  energy: 100
 --- !u!1 &2900764082396187854
 GameObject:
   m_ObjectHideFlags: 0
