@@ -8,6 +8,16 @@ public class StartGame : MonoBehaviour
     public GameObject hint;
     public GameObject death;
 
+
+    void Awake() 
+    {
+        if (PlayerStats.death)
+        {
+            hint.SetActive(false);
+            PlayerStats.death=false;
+        }
+    }
+
     void Start() 
     {
         if (hint.activeInHierarchy)
