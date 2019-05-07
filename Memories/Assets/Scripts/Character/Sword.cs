@@ -127,7 +127,7 @@ public class Sword : PlayerBase
     void hitEffect()
     {
         //Инвертировать эффект если влево/вправо
-        Destroy(Instantiate(hit, attackPos.position, Quaternion.identity), 0.75f);
+        Destroy(Instantiate(hit, attackPos.position, Quaternion.identity), 0.4f);
     }
 
     void OnDrawGizmosSelected() 
