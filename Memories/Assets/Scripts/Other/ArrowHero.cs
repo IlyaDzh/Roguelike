@@ -8,6 +8,10 @@ public class ArrowHero : MonoBehaviour
     void Start() 
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); 
+        if (player.GetComponent<Sword>())
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
