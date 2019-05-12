@@ -17,7 +17,7 @@ public class Wizard : PlayerBase
 
     protected override void Attack()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
         { 
             if (!GameObject.Find("GOManager")) return;
             projectile = GameObject.Find("GOManager").GetComponent<GOManager>().bullet[numberBullet];

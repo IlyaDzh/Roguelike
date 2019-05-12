@@ -17,17 +17,14 @@ public class ProjectileBoss : MonoBehaviour
     {
         if (other.tag == "Wall")
         {
+            Destroy(Instantiate(explosion, transform.position, Quaternion.identity), 1f);
             Destroy(gameObject);
         }
         if (other.tag == "Player")
         {
+            Destroy(Instantiate(explosion, transform.position, Quaternion.identity), 1f);
             PlayerStats.HP -= damage;
             Destroy(gameObject);
         }
     } 
-
-    private void OnDestroy() 
-    {
-        Destroy(Instantiate(explosion, transform.position, Quaternion.identity), 1f);
-    }
 }

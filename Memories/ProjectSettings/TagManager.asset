@@ -13,6 +13,7 @@ TagManager:
   - Wall
   - Coin
   - Event
+  - EnemyExplosion
   layers:
   - Default
   - TransparentFX

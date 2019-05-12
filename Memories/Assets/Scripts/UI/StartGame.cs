@@ -52,4 +52,10 @@ public class StartGame : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ClosePanel()
+    {
+        pause.SetActive(false);
+        Time.timeScale = 1;
+    }
 }
