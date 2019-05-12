@@ -6,7 +6,7 @@ public class ArrowHero : MonoBehaviour
 {
     private Transform player;
     void Start() 
-    {
+    {   
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); 
         if (player.GetComponent<Sword>())
         {

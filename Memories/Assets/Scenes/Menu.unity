@@ -509,6 +509,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382000629}
   m_CullTransparentMesh: 0
+--- !u!1 &477385929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477385931}
+  - component: {fileID: 477385930}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &477385930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477385929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140fc84baff87cc4ab7b7c983484d0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BGMusic
+    clip: {fileID: 8300000, guid: 9727e1bad9c33df4ca7f254d34140066, type: 3}
+    volume: 0.15
+    loop: 1
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 15d61db097271d44e9a21d1475b25388, type: 3}
+    volume: 0.4
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: e8874545e252cf14a9d3feec4fdd1c3b, type: 3}
+    volume: 0.25
+    loop: 0
+    source: {fileID: 0}
+  - name: Jar
+    clip: {fileID: 8300000, guid: 2eb10a4a805c8004b9a897dc30dd3da3, type: 3}
+    volume: 0.35
+    loop: 0
+    source: {fileID: 0}
+  - name: AttackSword1
+    clip: {fileID: 8300000, guid: c573f3bf72e5dde47b0c21f961915017, type: 3}
+    volume: 0.35
+    loop: 0
+    source: {fileID: 0}
+  - name: AttackSword2
+    clip: {fileID: 8300000, guid: 665690c51b6310f4abf6ee3fcbe6f500, type: 3}
+    volume: 0.35
+    loop: 0
+    source: {fileID: 0}
+  - name: Coin
+    clip: {fileID: 8300000, guid: 65dfded486964814e936266bfee88c65, type: 3}
+    volume: 0.35
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &477385931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477385929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &494020657
 GameObject:
   m_ObjectHideFlags: 0

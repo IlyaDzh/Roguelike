@@ -11,7 +11,7 @@ public class Jar : MonoBehaviour
         if (crash)
         {
             GetComponent<Animator>().enabled = true;
-            GetComponent<AudioSource>().Play();
+            FindObjectOfType<AudioManager>().Play("Jar");
             Destroy(this);
         }
     }
@@ -21,7 +21,7 @@ public class Jar : MonoBehaviour
         if (other.tag == "Bullet")
         {
             GetComponent<Animator>().enabled = true;
-            GetComponent<AudioSource>().Play();
+            FindObjectOfType<AudioManager>().Play("Jar");
             Destroy(other.gameObject);
             Destroy(this);
         }

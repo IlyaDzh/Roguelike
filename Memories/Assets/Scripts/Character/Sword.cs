@@ -128,6 +128,8 @@ public class Sword : PlayerBase
     {
         //Инвертировать эффект если влево/вправо
         Destroy(Instantiate(hit, attackPos.position, Quaternion.identity), 0.4f);
+        FindObjectOfType<AudioManager>().Play("AttackSword1");
+        //FindObjectOfType<AudioManager>().Play("AttackSword2");
     }
 
     void OnDrawGizmosSelected() 

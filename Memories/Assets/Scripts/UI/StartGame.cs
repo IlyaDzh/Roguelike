@@ -19,7 +19,7 @@ public class StartGame : MonoBehaviour
         if (PlayerStats.HP <= 0 && !PlayerStats.death)
         {
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
-            GetComponent<AudioSource>().Play();
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
             death.SetActive(true);
             PlayerStats.death = true;
         }

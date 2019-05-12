@@ -122,6 +122,7 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (HP<=0)
         {
+            FindObjectOfType<AudioManager>().Play("EnemyDeath");
             Destroy(Instantiate(explosion, transform.position, Quaternion.identity), 0.45f);
             int numberDrop = Random.Range(0, maxDrop);
             GameObject drop = GameObject.Find("GOManager").GetComponent<GOManager>().drop[numberDrop];

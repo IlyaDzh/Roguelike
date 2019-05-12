@@ -79,6 +79,7 @@ public abstract class PlayerBase : MonoBehaviour
     {
         if(other.tag == "Coin")
         {
+            FindObjectOfType<AudioManager>().Play("Coin");
             int money = other.GetComponent<Coins>().money;
             PlayerStats.coins += money;
             coinText.GetComponent<TextMesh>().text = "+" + money.ToString();
