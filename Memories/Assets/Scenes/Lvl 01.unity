@@ -1718,7 +1718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1038360747
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2809,6 +2809,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168183104801262657, guid: a04a319b8db640144a1a53febdb88499,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168183104801262657, guid: a04a319b8db640144a1a53febdb88499,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168183104801262657, guid: a04a319b8db640144a1a53febdb88499,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a04a319b8db640144a1a53febdb88499, type: 3}
