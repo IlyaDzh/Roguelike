@@ -19,6 +19,7 @@ public class Wizard : PlayerBase
     {
         if (Input.GetMouseButtonDown(0))
         { 
+            if (!GameObject.Find("GOManager")) return;
             projectile = GameObject.Find("GOManager").GetComponent<GOManager>().bullet[numberBullet];
             Vector2 mousePos = UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 myPos = transform.position;

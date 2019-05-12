@@ -20,7 +20,8 @@ public abstract class PlayerBase : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        txt = GameObject.Find("NumberCoins").GetComponent<Text>();   
+        txt = GameObject.Find("NumberCoins").GetComponent<Text>();  
+        Time.timeScale = 1; 
     }
     
 	protected virtual void TakeInput()

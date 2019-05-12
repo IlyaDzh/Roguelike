@@ -10,6 +10,12 @@ public class Menu : MonoBehaviour
     public Slider slider;
     public Text loadingText;
 
+    void Awake() 
+    {
+        Destroy (GameObject.FindGameObjectWithTag("Player"));
+        Destroy (GameObject.FindGameObjectWithTag("Event"));
+    }   
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

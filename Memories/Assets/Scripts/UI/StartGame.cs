@@ -5,33 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    public GameObject hint;
     public GameObject death;
+    public GameObject pause;
 
 
     void Awake() 
     {
-        if (PlayerStats.death)
-        {
-            hint.SetActive(false);
-            PlayerStats.death=false;
-        }
-    }
-
-    void Start() 
-    {
-        if (hint.activeInHierarchy)
-            Time.timeScale=0;
-        else Time.timeScale=1;
+        PlayerStats.death=false;
     }
 
     void Update()
     {
-        if (hint.activeInHierarchy && Input.anyKeyDown)
-        {
-            hint.SetActive(false);
-            Time.timeScale=1;
-        }
         if (PlayerStats.HP <= 0 && !PlayerStats.death)
         {
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
@@ -39,10 +23,33 @@ public class StartGame : MonoBehaviour
             death.SetActive(true);
             PlayerStats.death = true;
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Time.timeScale == 0)
+            {
+                pause.SetActive(false);
+                Time.timeScale = 1;
+            } else if (Time.timeScale == 1) {
+                pause.SetActive(true);
+                Time.timeScale = 0;
+            }
+        }
     }
 
     public void RestartGame()
     {
+        if (GameObject.FindGameObjectWithTag("Player"))
+            GameObject.FindGameObjectWithTag("Player").SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void ExitTheGame()
+    {
+        Application.Quit();
     }
 }

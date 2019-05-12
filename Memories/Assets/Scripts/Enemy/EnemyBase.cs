@@ -87,11 +87,14 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected virtual void Attack()
     {
-        if (Vector2.Distance (transform.position, target.transform.position) > attackDistance)
+        if (Time.timeScale != 0)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        } else {
-            PlayerStats.HP -= damage;
+            if (Vector2.Distance (transform.position, target.transform.position) > attackDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            } else {
+                PlayerStats.HP -= damage;
+            }
         }
     }
 
