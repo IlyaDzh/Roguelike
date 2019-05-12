@@ -7,7 +7,7 @@ public abstract class EnemyBase : MonoBehaviour
 {
     private SpriteRenderer sr;
     private Animator anim;
-    private Transform target;
+    protected Transform target;
     [Header("Характеристики врага")]
     public float HP;
     public float speed;

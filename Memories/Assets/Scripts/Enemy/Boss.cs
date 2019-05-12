@@ -4,15 +4,55 @@ using UnityEngine;
 
 public class Boss : EnemyBase
 {
+    public int numberOfProjectiles;
+	public GameObject projectile;
+	private float radius = 5f;
+    private float moveSpeed = 2f;
+
+	void Start() 
+	{
+		sl.maxValue = HP;
+        sl.value = HP;  
+		Attack();
+	}
+
     void Update() 
     {
         Following();
         CheckDeath();
     }
 
+	IEnumerator SpawnProjectiles(int numberOfProjectiles)
+	{
+		while(true)
+		{
+			float angleStep = 360f / numberOfProjectiles;
+			float angle = 0f;
+
+			for (int i = 0; i <= numberOfProjectiles - 1; i++) 
+			{
+				
+				float projectileDirXposition = transform.position.x + Mathf.Sin ((angle * Mathf.PI) / 180) * radius;
+				float projectileDirYposition = transform.position.y + Mathf.Cos ((angle * Mathf.PI) / 180) * radius;
+
+				Vector2 projectileVector = new Vector2 (projectileDirXposition, projectileDirYposition);
+				Vector2 tp = new Vector2 (transform.position.x, transform.position.y);
+				Vector2 projectileMoveDirection = (projectileVector - tp).normalized * moveSpeed;
+
+				var proj = Instantiate (projectile, transform.position, Quaternion.identity);
+				projectile.GetComponent<ProjectileBoss>().damage = damage;
+				proj.GetComponent<Rigidbody2D> ().velocity = new Vector2 (projectileMoveDirection.x, projectileMoveDirection.y);
+
+				angle += angleStep;
+			}
+
+			yield return new WaitForSeconds(3f);
+		}
+	}
+
     protected override void Attack()
     {
-        //особая атака
+        StartCoroutine(SpawnProjectiles (numberOfProjectiles));
     }
 
     protected override void Following()

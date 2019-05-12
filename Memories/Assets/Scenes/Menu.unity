@@ -541,7 +541,7 @@ MonoBehaviour:
   sounds:
   - name: BGMusic
     clip: {fileID: 8300000, guid: 9727e1bad9c33df4ca7f254d34140066, type: 3}
-    volume: 0.15
+    volume: 0.1
     loop: 1
     source: {fileID: 0}
   - name: PlayerDeath

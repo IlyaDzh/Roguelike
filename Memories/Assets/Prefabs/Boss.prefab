@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6524557882823521384}
   - component: {fileID: 39121931203371050}
   - component: {fileID: 8148148877754843188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   HP: 700
   speed: 0
   damage: 50
-  seeDistance: 4
+  seeDistance: 5
   attackDistance: 0
   startWaitTime: 0
   startWaitTime2: 0
@@ -165,6 +165,9 @@ MonoBehaviour:
   explosion: {fileID: 8182012338412774326, guid: 2d88d3c12e392ef4ba56f52ae22b9a65,
     type: 3}
   sl: {fileID: 5411689702963646212}
+  numberOfProjectiles: 7
+  projectile: {fileID: 4796979111842691530, guid: dad320a1d9f3c9f4fbc136a0b0bb866d,
+    type: 3}
 --- !u!1001 &8038356945616526908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,6 +179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131551727070301003, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5097603322741377385, guid: 3bbad78d5b997c8478726d4c28517ca1,
         type: 3}
@@ -291,6 +299,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938459653751255520, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6080852703290817841, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436903437313762116, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085273311095630688, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bbad78d5b997c8478726d4c28517ca1, type: 3}
