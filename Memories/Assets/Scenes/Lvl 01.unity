@@ -605,7 +605,7 @@ RectTransform:
   - {fileID: 274027814}
   - {fileID: 1092766122}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2287,7 +2287,7 @@ Transform:
   m_Children:
   - {fileID: 1959099636}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1601859067
 MonoBehaviour:
@@ -2944,7 +2944,7 @@ PrefabInstance:
     - target: {fileID: 5152499465550460251, guid: a04a319b8db640144a1a53febdb88499,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5152499465550460251, guid: a04a319b8db640144a1a53febdb88499,
         type: 3}
@@ -3131,7 +3131,7 @@ MonoBehaviour:
     type: 3}
   rooms: []
   waitTime: 6
-  boss: {fileID: 8664162266619200222, guid: d1bf61460eb04a14dbae425f22614f6d, type: 3}
+  boss: {fileID: 913120201131189967, guid: d32e4b7c7d6998545918125dd6470954, type: 3}
 --- !u!4 &2121224640
 Transform:
   m_ObjectHideFlags: 0
