@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4230151718699239675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.76, y: -1.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7597540111719056755}
@@ -163,16 +163,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
-  speed: 1.2
-  damage: 10
+  speed: 1.4
+  damage: 8
   maxDrop: 4
   damageText: {fileID: 1044934030791041467, guid: 8b8c7089409d66942bc274501b77000f,
     type: 3}
   explosion: {fileID: 8182012338412774326, guid: 2d88d3c12e392ef4ba56f52ae22b9a65,
     type: 3}
   sl: {fileID: 812448235151940898}
-  stopDistance: 6
-  retreatDistance: 3
+  seeDistance: 5
+  stopDistance: 3.5
+  retreatDistance: 2.5
+  projectile: {fileID: 4796979111842691530, guid: 1c91a7b1b7dc4e243a282c5d0d3c3434,
+    type: 3}
+  startTimeBtwAttack: 2
 --- !u!1001 &3445730133582941210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -295,6 +299,16 @@ PrefabInstance:
       propertyPath: m_FillRect
       value: 
       objectReference: {fileID: 5567890988375621738}
+    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bbad78d5b997c8478726d4c28517ca1, type: 3}
 --- !u!224 &7597540111719056755 stripped

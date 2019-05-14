@@ -16,7 +16,6 @@ public abstract class EnemyBase : MonoBehaviour
     public GameObject damageText;
     public GameObject explosion;
     public Slider sl;
-    
 
     void Start()
     {
