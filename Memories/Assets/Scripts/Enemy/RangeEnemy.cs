@@ -25,18 +25,23 @@ public class RangeEnemy : EnemyBase
     {
         if (Vector2.Distance (transform.position, target.transform.position) < seeDistance) 
         {
+            FlipX(target.position.x);
             Attack();
             if (Vector2.Distance(transform.position, target.transform.position) > stopDistance) {
+                anim.SetBool("Running", true);
                 transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
             } 
             else if (Vector2.Distance(transform.position, target.transform.position) < stopDistance && 
                     Vector2.Distance(transform.position, target.transform.position) > retreatDistance) {
+                        anim.SetBool("Running", false);
                 transform.position = this.transform.position;
             }
             else if (Vector2.Distance(transform.position, target.transform.position) < retreatDistance) {
+                anim.SetBool("Running", true);
                 transform.position = Vector2.MoveTowards(transform.position, target.transform.position, -speed * Time.deltaTime);
             }
         } else {
+            anim.SetBool("Running", false);
             //движение в рандомную сторону
         }
     }

@@ -16,4 +16,9 @@ public class Archer : PlayerBase
     {
         
     }
+
+    void SpawnSummons()
+    {
+        
+    }
 }

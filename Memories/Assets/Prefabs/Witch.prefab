@@ -116,7 +116,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.1385352}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5147059}
@@ -127,7 +127,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 1}
+  m_Size: {x: 0.6, y: 0.8229296}
   m_EdgeRadius: 0
 --- !u!50 &4230151718699239677
 Rigidbody2D:
@@ -171,9 +171,9 @@ MonoBehaviour:
   explosion: {fileID: 8182012338412774326, guid: 2d88d3c12e392ef4ba56f52ae22b9a65,
     type: 3}
   sl: {fileID: 812448235151940898}
-  seeDistance: 5
-  stopDistance: 3.5
-  retreatDistance: 2.5
+  seeDistance: 4.1
+  stopDistance: 3.2
+  retreatDistance: 2.1
   projectile: {fileID: 4796979111842691530, guid: 1c91a7b1b7dc4e243a282c5d0d3c3434,
     type: 3}
   startTimeBtwAttack: 2
@@ -184,16 +184,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4230151718699239678}
     m_Modifications:
-    - target: {fileID: 1131551727070301003, guid: 3bbad78d5b997c8478726d4c28517ca1,
-        type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2636809277847490872, guid: 3bbad78d5b997c8478726d4c28517ca1,
-        type: 3}
-      propertyPath: m_FillRect
-      value: 
-      objectReference: {fileID: 5567890988375621738}
     - target: {fileID: 5097603322741377385, guid: 3bbad78d5b997c8478726d4c28517ca1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -299,6 +289,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1131551727070301003, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636809277847490872, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_FillRect
+      value: 
+      objectReference: {fileID: 5567890988375621738}
     - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
         type: 3}
       propertyPath: m_AnchorMax.x
