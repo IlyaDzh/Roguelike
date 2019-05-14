@@ -20,7 +20,7 @@ public abstract class PlayerBase : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        txt = GameObject.Find("NumberCoins").GetComponent<Text>();  
+        txt = GameObject.FindGameObjectWithTag("NumberCoins").GetComponent<Text>();  
         Time.timeScale = 1; 
     }
     
@@ -43,7 +43,6 @@ public abstract class PlayerBase : MonoBehaviour
 	{
 		transform.Translate(direction * Speed * Time.deltaTime);
         //rb.velocity = direction * Speed * Time.deltaTime;
-        //rb.AddForce(direction * Speed * Time.deltaTime);
 		if (direction.x != 0 || direction.y != 0) {
 			AnimationMove (direction);
 		} else {

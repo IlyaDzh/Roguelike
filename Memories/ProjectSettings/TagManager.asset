@@ -13,6 +13,9 @@ TagManager:
   - Wall
   - Coin
   - Event
+  - NumberCoins
+  - Ukaz
+  - GOManager
   layers:
   - Default
   - TransparentFX

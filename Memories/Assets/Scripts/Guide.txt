@@ -1,0 +1,5 @@
+Mouse0 - Attack
+A,W,S,D - Movement
+E - Use
+F - Dash
+Space - Run

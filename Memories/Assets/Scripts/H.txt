@@ -1,4 +1,0 @@
-F - Dash
-Space - Run
-A,W,S,D - Movement
-E - Use

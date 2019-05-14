@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 462091262e94a2a42b942acef8459b36
+guid: cb9b16ab214f0c04d9bc3e9393cbc76c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Witcher_0
-    21300002: Witcher_1
-    21300004: Witcher_2
-    21300006: Witcher_3
-    21300008: Witcher_4
-    21300010: Witcher_5
-    21300012: Witcher_6
-    21300014: Witcher_7
-    21300016: Witcher_8
-    21300018: Witcher_9
-    21300020: Witcher_10
-    21300022: Witcher_11
+    21300000: witch1_1_0
+    21300002: witch1_1_1
+    21300004: witch1_1_2
+    21300006: witch1_1_3
+    21300008: witch1_1_4
+    21300010: witch1_1_5
+    21300012: witch1_1_6
+    21300014: witch1_1_7
+    21300016: witch1_1_8
+    21300018: witch1_1_9
+    21300020: witch1_1_10
+    21300022: witch1_1_11
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -118,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Witcher_0
+      name: witch1_1_0
       rect:
         serializedVersion: 2
         x: 3
@@ -132,13 +132,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb6c7eafba3b1a04cbf5c9eb41dc8c45
+      spriteID: 86f05bc903f31214f99aa06efa9965da
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_1
+      name: witch1_1_1
       rect:
         serializedVersion: 2
         x: 28
@@ -152,13 +152,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54a9d32f1379e36469f7ad0b9b49d925
+      spriteID: 327d3544765262540befb1fb07c059f5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_2
+      name: witch1_1_2
       rect:
         serializedVersion: 2
         x: 54
@@ -172,13 +172,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcc7e32afa0c4024dae7e74f38771853
+      spriteID: 020898c4913579d4ab5ee2edf71c7e71
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_3
+      name: witch1_1_3
       rect:
         serializedVersion: 2
         x: 3
@@ -192,13 +192,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fa7ca77b5147394bb162b1bcb8f3409
+      spriteID: 14e6ffcfa90c17f4e98a7e21a1b72683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_4
+      name: witch1_1_4
       rect:
         serializedVersion: 2
         x: 29
@@ -212,13 +212,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d958aebc575f4543816b0128203da4b
+      spriteID: 62ced09acbf4d0c4ba7db5ee92ac4b95
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_5
+      name: witch1_1_5
       rect:
         serializedVersion: 2
         x: 55
@@ -232,13 +232,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4fb980c4e663b9408181a2adaa0b738
+      spriteID: 85260624d7801664dbcb95e303464349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_6
+      name: witch1_1_6
       rect:
         serializedVersion: 2
         x: 2
@@ -252,13 +252,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f82352759451334e8f288b3c1e5f118
+      spriteID: ec6e2263aa20b0b4fbae065259552288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_7
+      name: witch1_1_7
       rect:
         serializedVersion: 2
         x: 28
@@ -272,13 +272,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885eaddbb625c3c4e8bca170a2972d9e
+      spriteID: a3b13eeed9fa76648b7ad3c50d2e242a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_8
+      name: witch1_1_8
       rect:
         serializedVersion: 2
         x: 54
@@ -292,13 +292,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7b53122e0358df4f852fab47d6bdf53
+      spriteID: 5dc5225563b35564bbd099d68bcedc1f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_9
+      name: witch1_1_9
       rect:
         serializedVersion: 2
         x: 2
@@ -312,13 +312,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 033f1469e0f5de941a7224633add3e75
+      spriteID: 5344a5e1199db354a894e7a481ae891d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_10
+      name: witch1_1_10
       rect:
         serializedVersion: 2
         x: 28
@@ -332,13 +332,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae21c1a3a5ff3c145b18682b45ab5882
+      spriteID: 895cdcebe4d54534fa13e1bbecdb5634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witcher_11
+      name: witch1_1_11
       rect:
         serializedVersion: 2
         x: 54
@@ -352,7 +352,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9c9466a82b72e046ab890d910e777d2
+      spriteID: 4a387e2b4021d164c88d45192efc4697
       vertices: []
       indices: 
       edges: []
@@ -360,7 +360,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 77bc16dfdd41a8d4b9da6a39cec46842
+    spriteID: 64dcef7d3dcfa2145957297d17672272
     vertices: []
     indices: 
     edges: []
