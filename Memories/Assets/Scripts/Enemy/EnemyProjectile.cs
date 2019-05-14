@@ -12,6 +12,7 @@ public class EnemyProjectile : MonoBehaviour
 
     void Start()
     {
+        if (!GameObject.FindGameObjectWithTag("Player")) return;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = new Vector2(player.position.x, player.position.y);
     }

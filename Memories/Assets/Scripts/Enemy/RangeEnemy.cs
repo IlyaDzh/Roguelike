@@ -37,8 +37,7 @@ public class RangeEnemy : EnemyBase
                 transform.position = Vector2.MoveTowards(transform.position, target.transform.position, -speed * Time.deltaTime);
             }
         } else {
-            Debug.Log("stop");
-            //движение
+            //движение в рандомную сторону
         }
     }
 

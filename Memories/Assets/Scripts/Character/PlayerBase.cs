@@ -59,7 +59,7 @@ public abstract class PlayerBase : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.tag == "Coin")
+        if (other.tag == "Coin")
         {
             FindObjectOfType<AudioManager>().Play("Coin");
             int money = other.GetComponent<Coins>().money;

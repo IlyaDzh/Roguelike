@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2900764081529536219}
   - component: {fileID: 2900764081529536217}
   - component: {fileID: 2900764081529536221}
+  - component: {fileID: 1418613073329958062}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Player
@@ -189,6 +190,18 @@ MonoBehaviour:
   attackRange: 0.4
   hit: {fileID: 85534321437129453, guid: d9f3dd14eb421c547b44a04dc412c4cd, type: 3}
   energy: 100
+--- !u!114 &1418613073329958062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2900764081529536208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5be6342d645ec43807615d328d266e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2900764082396187854
 GameObject:
   m_ObjectHideFlags: 0

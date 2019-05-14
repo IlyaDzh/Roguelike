@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4062100905417793594}
   - component: {fileID: 4287401178878741540}
   - component: {fileID: 8373474246749231977}
+  - component: {fileID: 8861312326895560810}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Player
@@ -180,3 +181,15 @@ MonoBehaviour:
   Speed: 3
   minDamage: 10
   maxDamage: 20
+--- !u!114 &8861312326895560810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443393062372351781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5be6342d645ec43807615d328d266e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
