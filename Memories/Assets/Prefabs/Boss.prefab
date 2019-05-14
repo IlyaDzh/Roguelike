@@ -155,7 +155,7 @@ MonoBehaviour:
   HP: 1000
   speed: 0
   damage: 40
-  seeDistance: 5
+  seeDistance: 0
   attackDistance: 0
   startWaitTime: 0
   startWaitTime2: 0
@@ -168,6 +168,8 @@ MonoBehaviour:
   numberOfProjectiles: 7
   projectile: {fileID: 4796979111842691530, guid: dad320a1d9f3c9f4fbc136a0b0bb866d,
     type: 3}
+  radius: 5
+  moveSpeed: 2
 --- !u!1001 &8038356945616526908
 PrefabInstance:
   m_ObjectHideFlags: 0

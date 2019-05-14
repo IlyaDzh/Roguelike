@@ -8,7 +8,17 @@ public class RangeEnemy : EnemyBase
     {
         Following();
         CheckDeath();
+        Attack();
     }
 
+    protected override void Following()
+    {
+
+    }
+
+    protected override void Attack()
+    {
+
+    }
     //Переопределить дальнюю атаку
 }

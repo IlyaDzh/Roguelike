@@ -27,33 +27,16 @@ public abstract class PlayerBase : MonoBehaviour
 	protected virtual void TakeInput()
 	{
         direction = Vector2.zero;
-        if (Input.GetKey (KeyCode.W)) 
-        {
-            direction += Vector2.up*0.9f;
-        }
-        if (Input.GetKey (KeyCode.A)) 
-        {
-            direction += Vector2.left;
-        }
-        if (Input.GetKey (KeyCode.S)) 
-        {
-            direction += Vector2.down*0.9f;
-        }
-        if (Input.GetKey (KeyCode.D)) 
-        {
-            direction += Vector2.right;
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            transform.Translate(direction);
-        }
+        if (Input.GetKey (KeyCode.W)) direction += Vector2.up*0.9f;
+        if (Input.GetKey (KeyCode.A)) direction += Vector2.left;
+        if (Input.GetKey (KeyCode.S)) direction += Vector2.down*0.9f;
+        if (Input.GetKey (KeyCode.D)) direction += Vector2.right;
+        if (Input.GetKeyDown(KeyCode.F)) transform.Translate(direction);
         if ((Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A)) || 
             (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D)) || 
             (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D)) || 
             (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A)))
-        {
             direction *= 0.8f;
-        }
     }
 
     protected void Move()

@@ -13,6 +13,7 @@ public class Wizard : PlayerBase
 		TakeInput ();
 		Move ();
         Attack();
+        SwapProjectile();
     }
 
     protected override void Attack()
@@ -28,5 +29,10 @@ public class Wizard : PlayerBase
             spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
             spell.GetComponent<Projectile>().damage = Random.Range(minDamage, maxDamage);
         }
+    }
+
+    void SwapProjectile()
+    {
+        //смена снарядов
     }
 }

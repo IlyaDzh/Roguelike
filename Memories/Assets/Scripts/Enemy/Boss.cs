@@ -6,8 +6,8 @@ public class Boss : EnemyBase
 {
     public int numberOfProjectiles;
 	public GameObject projectile;
-	private float radius = 5f;
-    private float moveSpeed = 2f;
+	public float radius;
+    public float moveSpeed;
 
 	void Start() 
 	{
@@ -53,10 +53,11 @@ public class Boss : EnemyBase
     protected override void Attack()
     {
         StartCoroutine(SpawnProjectiles (numberOfProjectiles));
+		//другие корутины
     }
 
     protected override void Following()
     {
-        
+        //движение босса
     }
 }
