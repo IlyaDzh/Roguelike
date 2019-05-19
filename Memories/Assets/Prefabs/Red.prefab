@@ -171,7 +171,7 @@ MonoBehaviour:
   explosion: {fileID: 8182012338412774326, guid: 2d88d3c12e392ef4ba56f52ae22b9a65,
     type: 3}
   sl: {fileID: 8656149000403345472}
-  seeDistance: 3.7
+  seeDistance: 3.8
   attackDistance: 0.9
   startWaitTime: 3
   startWaitTime2: 2

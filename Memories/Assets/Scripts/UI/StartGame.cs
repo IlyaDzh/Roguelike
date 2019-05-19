@@ -7,6 +7,7 @@ public class StartGame : MonoBehaviour
 {
     public GameObject death;
     public GameObject pause;
+    public GameObject map;
 
 
     void Awake() 
@@ -20,6 +21,7 @@ public class StartGame : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
+            map.SetActive(false);
             death.SetActive(true);
             PlayerStats.death = true;
         }
@@ -57,5 +59,10 @@ public class StartGame : MonoBehaviour
     {
         pause.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void AddHP()
+    {
+        PlayerStats.HP += 10;
     }
 }

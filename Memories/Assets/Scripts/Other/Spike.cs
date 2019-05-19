@@ -8,7 +8,7 @@ public class Spike : MonoBehaviour
 
     void Update()
     {
-        if (colWithSpike && Time.timeScale == 1) PlayerStats.HP -= 0.15f;
+        if (colWithSpike && Time.timeScale == 1) PlayerStats.HP -= 0.08f;
     }
 
     void OnCollisionEnter2D(Collision2D other) 

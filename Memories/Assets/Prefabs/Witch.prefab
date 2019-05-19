@@ -171,12 +171,12 @@ MonoBehaviour:
   explosion: {fileID: 8182012338412774326, guid: 2d88d3c12e392ef4ba56f52ae22b9a65,
     type: 3}
   sl: {fileID: 812448235151940898}
-  seeDistance: 4.1
+  seeDistance: 4.2
   stopDistance: 3.2
   retreatDistance: 2.1
   projectile: {fileID: 4796979111842691530, guid: 1c91a7b1b7dc4e243a282c5d0d3c3434,
     type: 3}
-  startTimeBtwAttack: 2
+  startTimeBtwAttack: 1.5
 --- !u!1001 &3445730133582941210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184,6 +184,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4230151718699239678}
     m_Modifications:
+    - target: {fileID: 1131551727070301003, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5097603322741377385, guid: 3bbad78d5b997c8478726d4c28517ca1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -289,26 +304,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1131551727070301003, guid: 3bbad78d5b997c8478726d4c28517ca1,
-        type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
     - target: {fileID: 2636809277847490872, guid: 3bbad78d5b997c8478726d4c28517ca1,
         type: 3}
       propertyPath: m_FillRect
       value: 
       objectReference: {fileID: 5567890988375621738}
-    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bbad78d5b997c8478726d4c28517ca1, type: 3}
 --- !u!224 &7597540111719056755 stripped
