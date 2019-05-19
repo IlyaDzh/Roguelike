@@ -60,9 +60,4 @@ public class StartGame : MonoBehaviour
         pause.SetActive(false);
         Time.timeScale = 1;
     }
-
-    public void AddHP()
-    {
-        PlayerStats.HP += 10;
-    }
 }

@@ -19,6 +19,7 @@ public class Sword : PlayerBase
 		Move ();
         Attack();
         Energy();
+        Armor();
     }
 
     protected override void TakeInput()
@@ -50,11 +51,8 @@ public class Sword : PlayerBase
             attackPos.position = new Vector2 (transform.position.x+0.3f, transform.position.y-0.3f);
         if (Input.GetKeyDown(KeyCode.F))
             transform.Translate(direction);
-        if ((Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A)) || 
-            (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D)) || 
-            (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D)) || 
-            (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A)))
-            direction *= 0.8f;
+        if (NeedDiagonalAdjustment()) direction *= 0.8f;
+        AddHP();
     }
 
     protected override void Attack()
@@ -96,6 +94,11 @@ public class Sword : PlayerBase
         if (energy >= 100) energy = 100;
         if (energy <= 0) energy = 0;
         if (energy == 10 && Input.GetKey(KeyCode.Space)) energy = 0;
+    }
+
+    void Armor()
+    {
+        //Нажатие кнопки F запускает анимацию и весь урон умножается на коэффциент защиты
     }
 
     void hitEffect()

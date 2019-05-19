@@ -23,7 +23,15 @@ public abstract class PlayerBase : MonoBehaviour
         txt = GameObject.FindGameObjectWithTag("NumberCoins").GetComponent<Text>();  
         Time.timeScale = 1; 
     }
-    
+
+    protected bool NeedDiagonalAdjustment()
+    {
+        return (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A)) ||
+               (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D)) ||
+               (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D)) ||
+               (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A));
+    }
+
 	protected virtual void TakeInput()
 	{
         direction = Vector2.zero;
@@ -32,11 +40,8 @@ public abstract class PlayerBase : MonoBehaviour
         if (Input.GetKey (KeyCode.S)) direction += Vector2.down*0.9f;
         if (Input.GetKey (KeyCode.D)) direction += Vector2.right;
         if (Input.GetKeyDown(KeyCode.F)) transform.Translate(direction);
-        if ((Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A)) || 
-            (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D)) || 
-            (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D)) || 
-            (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A)))
-            direction *= 0.8f;
+        if (NeedDiagonalAdjustment()) direction *= 0.8f;
+        AddHP();
     }
 
     protected void Move()
@@ -57,7 +62,7 @@ public abstract class PlayerBase : MonoBehaviour
 		animator.SetFloat ("y", direction.y);
 	}
 
-    void OnTriggerEnter2D(Collider2D other) 
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Coin")
         {
@@ -70,6 +75,12 @@ public abstract class PlayerBase : MonoBehaviour
 
             Destroy(other.gameObject);            
         }
+    }
+
+    protected void AddHP()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
+            PlayerStats.HP += 10;
     }
 
     protected abstract void Attack();

@@ -28,4 +28,10 @@ public class PlayerStats : MonoBehaviour
     {
         HP = maxHP;
     }
+
+    void Update()
+    {
+        if (HP > maxHP)
+            HP = maxHP;
+    }
 }
