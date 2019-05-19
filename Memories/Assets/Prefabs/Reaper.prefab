@@ -171,7 +171,7 @@ MonoBehaviour:
   explosion: {fileID: 8182012338412774326, guid: 2d88d3c12e392ef4ba56f52ae22b9a65,
     type: 3}
   sl: {fileID: 812448235151940898}
-  seeDistance: 3.5
+  seeDistance: 3.7
   attackDistance: 0.9
   startWaitTime: 3
   startWaitTime2: 2
@@ -186,6 +186,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5097603322741377385, guid: 3bbad78d5b997c8478726d4c28517ca1,
         type: 3}
@@ -291,16 +301,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103493922892565616, guid: 3bbad78d5b997c8478726d4c28517ca1,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bbad78d5b997c8478726d4c28517ca1, type: 3}
