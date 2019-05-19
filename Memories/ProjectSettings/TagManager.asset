@@ -16,6 +16,7 @@ TagManager:
   - NumberCoins
   - Ukaz
   - GOManager
+  - ShakeManager
   layers:
   - Default
   - TransparentFX

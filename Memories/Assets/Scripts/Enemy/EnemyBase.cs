@@ -16,9 +16,11 @@ public abstract class EnemyBase : MonoBehaviour
     public GameObject damageText;
     public GameObject explosion;
     public Slider sl;
+    protected Shake shake;
 
     void Start()
     {
+        shake = GameObject.FindGameObjectWithTag("ShakeManager").GetComponent<Shake>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();   
@@ -27,6 +29,7 @@ public abstract class EnemyBase : MonoBehaviour
     }
 
     protected abstract void Following();
+    protected abstract void Attack();
 
     protected void FlipX(float other)
     {
@@ -37,8 +40,6 @@ public abstract class EnemyBase : MonoBehaviour
             sr.flipX=false;
         }
     }
-
-    protected abstract void Attack();
 
     public void TakeDamage(int damage)
     {
@@ -56,6 +57,7 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (HP<=0)
         {
+            shake.CamShake();
             FindObjectOfType<AudioManager>().Play("EnemyDeath");
             Destroy(Instantiate(explosion, transform.position, Quaternion.identity), 0.45f);
             int numberDrop = Random.Range(0, maxDrop);

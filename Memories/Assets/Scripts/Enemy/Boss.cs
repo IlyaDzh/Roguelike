@@ -11,6 +11,7 @@ public class Boss : EnemyBase
 
 	void Start() 
 	{
+		shake = GameObject.FindGameObjectWithTag("ShakeManager").GetComponent<Shake>();
 		sl.maxValue = HP;
         sl.value = HP;  
 		Attack();
