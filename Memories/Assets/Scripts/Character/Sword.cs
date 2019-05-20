@@ -11,12 +11,13 @@ public class Sword : PlayerBase
     [Range(0,1)]
     public float attackRange;
     public GameObject hit;
+    public GameObject armorFX;
     public float energy;
 
     void Update ()
 	{
+        Move ();
 		TakeInput ();
-		Move ();
         Attack();
         Energy();
         Armor();
@@ -49,8 +50,6 @@ public class Sword : PlayerBase
             attackPos.position = new Vector2 (transform.position.x-0.3f, transform.position.y-0.3f);
         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
             attackPos.position = new Vector2 (transform.position.x+0.3f, transform.position.y-0.3f);
-        if (Input.GetKeyDown(KeyCode.F))
-            transform.Translate(direction);
         if (NeedDiagonalAdjustment()) direction *= 0.8f;
         AddHP();
     }
@@ -98,6 +97,10 @@ public class Sword : PlayerBase
 
     void Armor()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            GameObject spell = Instantiate(armorFX, transform.position, Quaternion.identity);
+        }
         //Нажатие кнопки F запускает анимацию и весь урон умножается на коэффциент защиты
     }
 

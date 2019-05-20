@@ -39,7 +39,6 @@ public abstract class PlayerBase : MonoBehaviour
         if (Input.GetKey (KeyCode.A)) direction += Vector2.left;
         if (Input.GetKey (KeyCode.S)) direction += Vector2.down*0.9f;
         if (Input.GetKey (KeyCode.D)) direction += Vector2.right;
-        if (Input.GetKeyDown(KeyCode.F)) transform.Translate(direction);
         if (NeedDiagonalAdjustment()) direction *= 0.8f;
         AddHP();
     }

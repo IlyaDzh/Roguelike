@@ -190,6 +190,7 @@ MonoBehaviour:
     m_Bits: 256
   attackRange: 0.4
   hit: {fileID: 85534321437129453, guid: d9f3dd14eb421c547b44a04dc412c4cd, type: 3}
+  armorFX: {fileID: 9162205348274654735, guid: f88cc3bf9b3cc2d4d94981bf0434f371, type: 3}
   energy: 100
 --- !u!114 &1418613073329958062
 MonoBehaviour:
