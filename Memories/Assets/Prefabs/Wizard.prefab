@@ -184,6 +184,8 @@ MonoBehaviour:
   maxDamage: 55
   projectileForce: 6
   numberBullet: 0
+  dashSpeed: 6
+  startDashTime: 0.2
 --- !u!114 &5808266674000361636
 MonoBehaviour:
   m_ObjectHideFlags: 0

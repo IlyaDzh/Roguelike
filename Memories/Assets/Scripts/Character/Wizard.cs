@@ -35,7 +35,7 @@ public class Wizard : PlayerBase
     void Dash()
     {
         if (Input.GetKeyDown(KeyCode.F))
-            transform.Translate(direction);
+            transform.Translate(direction * 1.75f);
     }
 
     void SwapProjectile()
