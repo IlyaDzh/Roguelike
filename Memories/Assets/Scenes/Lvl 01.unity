@@ -854,6 +854,7 @@ MonoBehaviour:
   death: {fileID: 274027813}
   pause: {fileID: 1092766121}
   map: {fileID: 827144401}
+  abilityPanel: {fileID: 1274839591}
 --- !u!1 &344532807
 GameObject:
   m_ObjectHideFlags: 0

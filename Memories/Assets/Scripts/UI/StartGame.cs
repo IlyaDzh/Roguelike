@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
@@ -8,6 +9,7 @@ public class StartGame : MonoBehaviour
     public GameObject death;
     public GameObject pause;
     public GameObject map;
+    public GameObject abilityPanel;
 
 
     void Awake() 
@@ -22,6 +24,7 @@ public class StartGame : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
             map.SetActive(false);
+            abilityPanel.SetActive(false);
             death.SetActive(true);
             PlayerStats.death = true;
         }

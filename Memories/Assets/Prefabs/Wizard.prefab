@@ -182,10 +182,10 @@ MonoBehaviour:
   Speed: 3
   minDamage: 30
   maxDamage: 55
+  abilityF: {fileID: 6031539653578195290, guid: f0618efe2b5fc6b4a97483dd30bab3dc,
+    type: 3}
   projectileForce: 6
   numberBullet: 0
-  dashSpeed: 6
-  startDashTime: 0.2
 --- !u!114 &5808266674000361636
 MonoBehaviour:
   m_ObjectHideFlags: 0

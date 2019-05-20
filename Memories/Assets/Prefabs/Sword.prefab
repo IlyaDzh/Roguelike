@@ -183,6 +183,8 @@ MonoBehaviour:
   Speed: 2.5
   minDamage: 40
   maxDamage: 60
+  abilityF: {fileID: 6031539653578195290, guid: 0b6fce57a44d2ce49af87809b349f984,
+    type: 3}
   startTimeBtwAttack: 0.2
   attackPos: {fileID: 2900764082396187853}
   whatIsEnemies:
