@@ -7,6 +7,7 @@ public class Wizard : PlayerBase
     private GameObject projectile;
     public float projectileForce;
     public int numberBullet;
+    public GameObject teleportFX;
 
     void Update ()
 	{
@@ -35,7 +36,10 @@ public class Wizard : PlayerBase
     void Dash()
     {
         if (Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(Instantiate(teleportFX, transform.position, Quaternion.identity), 1f);
             transform.Translate(direction * 1.75f);
+        }  
     }
 
     void SwapProjectile()
