@@ -10,11 +10,29 @@ public class StartGame : MonoBehaviour
     public GameObject pause;
     public GameObject map;
     public GameObject abilityPanel;
+    public Sprite[] img;
+    public GameObject myImg;
 
 
     void Awake() 
     {
         PlayerStats.death=false;
+    }
+
+    void Start()
+    {
+        switch (Character.numberChooseHero)
+        {
+            case 1:
+                myImg.GetComponent<Image>().sprite = img[0];
+                break;
+            case 2:
+                myImg.GetComponent<Image>().sprite = img[1];
+                break;
+            case 3:
+                myImg.GetComponent<Image>().sprite = img[2];
+                break;
+        }
     }
 
     void Update()

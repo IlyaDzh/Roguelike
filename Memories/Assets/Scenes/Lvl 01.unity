@@ -855,6 +855,11 @@ MonoBehaviour:
   pause: {fileID: 1092766121}
   map: {fileID: 827144401}
   abilityPanel: {fileID: 1274839591}
+  img:
+  - {fileID: 21300000, guid: d51c7a3c74aaf434093737f904601d7e, type: 3}
+  - {fileID: 21300004, guid: 4dbfbb26d3eadfa418ce0a85285a49f4, type: 3}
+  - {fileID: 21300002, guid: 24787e0654d8d584590b543e71b159be, type: 3}
+  myImg: {fileID: 679365874}
 --- !u!1 &344532807
 GameObject:
   m_ObjectHideFlags: 0
