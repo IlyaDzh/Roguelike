@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
     public static PlayerStats playerStats;
     [Header("Характеристики героя")]
     public static float HP;
+    public static float armor;
     public float maxHP;
     public static int coins;
     public static bool death;

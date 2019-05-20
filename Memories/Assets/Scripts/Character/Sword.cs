@@ -85,7 +85,7 @@ public class Sword : PlayerBase
     {
         if (energy > 10 && Input.GetKey(KeyCode.Space)) {
             energy -= 0.5f;
-            Speed = 3.5f;
+            Speed = 3.7f;
         } else {
             energy += 0.5f;
             Speed = 2.5f;
@@ -99,17 +99,15 @@ public class Sword : PlayerBase
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            GameObject spell = Instantiate(armorFX, transform.position, Quaternion.identity);
+            PlayerStats.armor = 0.5f;
+            Instantiate(armorFX, transform.position, Quaternion.identity);
         }
-        //Нажатие кнопки F запускает анимацию и весь урон умножается на коэффциент защиты
     }
 
     void hitEffect()
     {
-        //Инвертировать эффект если влево/вправо
         Destroy(Instantiate(hit, attackPos.position, Quaternion.identity), 0.4f);
         FindObjectOfType<AudioManager>().Play("AttackSword1");
-        //FindObjectOfType<AudioManager>().Play("AttackSword2");
     }
 
     void OnDrawGizmosSelected() 

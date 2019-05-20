@@ -22,6 +22,7 @@ public abstract class PlayerBase : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         txt = GameObject.FindGameObjectWithTag("NumberCoins").GetComponent<Text>();  
         Time.timeScale = 1; 
+        PlayerStats.armor = 1f;
     }
 
     protected bool NeedDiagonalAdjustment()
