@@ -80,9 +80,11 @@ public abstract class PlayerBase : MonoBehaviour
 
     protected void AddHP()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
+        if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) && PlayerStats.numberOfBottle > 0 && Time.deltaTime != 0)
         {
-            Vector2 hpPosition = new Vector2(transform.position.x, transform.position.y + 0.25f); // засунуть в старт
+            PlayerStats.numberOfBottle--;
+            GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<StartGame>().UpdateBottleNumber();
+            Vector2 hpPosition = new Vector2(transform.position.x, transform.position.y + 0.25f);
             Destroy(Instantiate(hpFX, hpPosition, Quaternion.identity), 2f);
             PlayerStats.HP += 10;
         }    

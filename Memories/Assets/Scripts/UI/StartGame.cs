@@ -12,6 +12,7 @@ public class StartGame : MonoBehaviour
     public GameObject abilityPanel;
     public Sprite[] img;
     public GameObject myImg;
+    public Text numberBottleText;
 
 
     void Awake() 
@@ -33,6 +34,7 @@ public class StartGame : MonoBehaviour
                 myImg.GetComponent<Image>().sprite = img[2];
                 break;
         }
+        numberBottleText.text = PlayerStats.numberOfBottle.ToString();
     }
 
     void Update()
@@ -61,6 +63,7 @@ public class StartGame : MonoBehaviour
 
     public void RestartGame()
     {
+        PlayerStats.numberOfBottle = 0;
         if (GameObject.FindGameObjectWithTag("Player"))
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -68,6 +71,7 @@ public class StartGame : MonoBehaviour
 
     public void BackToMenu()
     {
+        PlayerStats.numberOfBottle = 0;
         SceneManager.LoadScene("Menu");
     }
 
@@ -80,5 +84,10 @@ public class StartGame : MonoBehaviour
     {
         pause.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void UpdateBottleNumber()
+    {
+        numberBottleText.text = PlayerStats.numberOfBottle.ToString();
     }
 }

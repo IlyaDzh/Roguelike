@@ -17,6 +17,7 @@ TagManager:
   - Ukaz
   - GOManager
   - ShakeManager
+  - MainCanvas
   layers:
   - Default
   - TransparentFX
