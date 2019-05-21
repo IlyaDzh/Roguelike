@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
     {
         ukaz = GameObject.FindGameObjectWithTag("Ukaz").GetComponent<Transform>(); 
         transform.rotation = ukaz.transform.rotation;
-        Destroy(gameObject, 0.9f);
+        Destroy(gameObject, 0.8f);
     }
 
     void OnTriggerEnter2D(Collider2D other) 
