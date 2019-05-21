@@ -8,17 +8,18 @@ public abstract class EnemyBase : MonoBehaviour
     private SpriteRenderer sr;
     protected Animator anim;
     protected Transform target;
+    public GameObject damageText;
+    public GameObject explosion;
+    public Slider sl;
+    private Shake shake;
     [Header("Характеристики врага")]
     public float HP;
     public float speed;
     public float damage;
     public int maxDrop;
-    public GameObject damageText;
-    public GameObject explosion;
-    public Slider sl;
-    protected Shake shake;
+    
 
-    void Start()
+    protected virtual void Start()
     {
         shake = GameObject.FindGameObjectWithTag("ShakeManager").GetComponent<Shake>();
         anim = GetComponent<Animator>();

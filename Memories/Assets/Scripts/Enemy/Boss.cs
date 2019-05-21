@@ -9,11 +9,9 @@ public class Boss : EnemyBase
 	public float radius;
     public float moveSpeed;
 
-	void Start() 
+	protected override void Start() 
 	{
-		shake = GameObject.FindGameObjectWithTag("ShakeManager").GetComponent<Shake>();
-		sl.maxValue = HP;
-        sl.value = HP;  
+		base.Start();
 		Attack();
 	}
 
