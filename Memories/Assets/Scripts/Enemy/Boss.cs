@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Boss : EnemyBase
 {
-    public int numberOfProjectiles;
 	public GameObject projectile;
 	public float radius;
-    public float moveSpeed;
+    public float projectileSpeed;
+	private int numberOfProjectiles;
 
 	protected override void Start() 
 	{
@@ -21,10 +21,11 @@ public class Boss : EnemyBase
         CheckDeath();
     }
 
-	IEnumerator SpawnProjectiles(int numberOfProjectiles)
+	IEnumerator SpawnProjectiles()
 	{
 		while(true)
 		{
+			numberOfProjectiles = Random.Range(5, 12);
 			float angleStep = 360f / numberOfProjectiles;
 			float angle = 0f;
 
@@ -36,7 +37,7 @@ public class Boss : EnemyBase
 
 				Vector2 projectileVector = new Vector2 (projectileDirXposition, projectileDirYposition);
 				Vector2 tp = new Vector2 (transform.position.x, transform.position.y);
-				Vector2 projectileMoveDirection = (projectileVector - tp).normalized * moveSpeed;
+				Vector2 projectileMoveDirection = (projectileVector - tp).normalized * projectileSpeed;
 
 				var proj = Instantiate (projectile, transform.position, Quaternion.identity);
 				projectile.GetComponent<ProjectileBoss>().damage = damage * PlayerStats.armor;
@@ -51,7 +52,7 @@ public class Boss : EnemyBase
 
     protected override void Attack()
     {
-        StartCoroutine(SpawnProjectiles (numberOfProjectiles));
+        StartCoroutine(SpawnProjectiles ());
 		//другие корутины
     }
 

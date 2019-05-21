@@ -152,20 +152,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4195162a698dbd04c9f63ce9ddcf5768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1000
-  speed: 0
-  damage: 40
-  maxDrop: 5
   damageText: {fileID: 1044934030791041467, guid: 8b8c7089409d66942bc274501b77000f,
     type: 3}
   explosion: {fileID: 5699101591367993125, guid: 94bc506baa17ae94e9966072906f0f10,
     type: 3}
   sl: {fileID: 5411689702963646212}
-  numberOfProjectiles: 7
+  HP: 1000
+  speed: 0
+  damage: 35
+  maxDrop: 5
   projectile: {fileID: 4796979111842691530, guid: dad320a1d9f3c9f4fbc136a0b0bb866d,
     type: 3}
   radius: 5
-  moveSpeed: 2
+  projectileSpeed: 2
 --- !u!1001 &8038356945616526908
 PrefabInstance:
   m_ObjectHideFlags: 0
