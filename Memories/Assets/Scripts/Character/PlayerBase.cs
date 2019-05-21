@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public abstract class PlayerBase : MonoBehaviour
 {
     public GameObject coinText;
+    public GameObject hpFX;
     [Header("Характеристика героя")]
     public float Speed;
     protected int damage;
@@ -80,7 +81,11 @@ public abstract class PlayerBase : MonoBehaviour
     protected void AddHP()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            Vector2 hpPosition = new Vector2(transform.position.x, transform.position.y + 0.25f); // засунуть в старт
+            Destroy(Instantiate(hpFX, hpPosition, Quaternion.identity), 2f);
             PlayerStats.HP += 10;
+        }    
     }
 
     protected abstract void Attack();

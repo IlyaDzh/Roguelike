@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinText: {fileID: 1044934030791041467, guid: d0a62ef7f8f586645a9caef237e1db95,
     type: 3}
+  hpFX: {fileID: 8718134989483756469, guid: 1f14c3df0812b4f42a66d3c933c71795, type: 3}
   Speed: 3
   minDamage: 10
   maxDamage: 20
