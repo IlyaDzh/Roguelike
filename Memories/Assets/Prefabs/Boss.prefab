@@ -160,7 +160,7 @@ MonoBehaviour:
   HP: 1000
   speed: 0
   damage: 35
-  maxDrop: 5
+  maxDrop: 9
   projectile: {fileID: 4796979111842691530, guid: dad320a1d9f3c9f4fbc136a0b0bb866d,
     type: 3}
   radius: 5

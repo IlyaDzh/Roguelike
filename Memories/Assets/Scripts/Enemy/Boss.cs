@@ -31,7 +31,6 @@ public class Boss : EnemyBase
 
 			for (int i = 0; i <= numberOfProjectiles - 1; i++) 
 			{
-				
 				float projectileDirXposition = transform.position.x + Mathf.Sin ((angle * Mathf.PI) / 180) * radius;
 				float projectileDirYposition = transform.position.y + Mathf.Cos ((angle * Mathf.PI) / 180) * radius;
 

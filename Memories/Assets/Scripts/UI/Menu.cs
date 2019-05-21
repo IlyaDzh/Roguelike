@@ -43,7 +43,8 @@ public class Menu : MonoBehaviour
 
     public void LoadLevel()
     {
-        StartCoroutine(LoadAsynchronously());
+        if(Character.numberChooseHero > 0 && Character.numberChooseHero < 4)
+            StartCoroutine(LoadAsynchronously());
     }
 
     IEnumerator LoadAsynchronously ()
