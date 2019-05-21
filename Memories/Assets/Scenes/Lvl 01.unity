@@ -1280,7 +1280,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &547746328
 MonoBehaviour:
@@ -3912,6 +3912,8 @@ MonoBehaviour:
   - {fileID: 8347267867040427027, guid: 1aef7992fe93cae44ac95482696635cd, type: 3}
   - {fileID: 6559122597976736462, guid: 263f40111a1a19c49857bb019586314f, type: 3}
   - {fileID: 5905176332694208105, guid: a4a20662f5cda0b4ea2bd12c3e8ee28b, type: 3}
+  - {fileID: 2777981255938634389, guid: 2429b0a3e6785a044b1033ce458c8bc3, type: 3}
+  - {fileID: 2777981255938634389, guid: bcd6c5f351f05ab47a37f8b844240b66, type: 3}
   topRooms:
   - {fileID: 4888353603304475668, guid: 3a32351e5d1cb0048b697fe799b8817f, type: 3}
   - {fileID: 4569864361843860657, guid: d711e68fb0c93bd49933909d5f44cd0c, type: 3}
@@ -3922,6 +3924,9 @@ MonoBehaviour:
   - {fileID: 1515309117289986882, guid: ca74d53f48af63a48aea316d13a198b8, type: 3}
   - {fileID: 4888353603304475668, guid: 1dc3be443a7a2eb4782defe5eb641d0e, type: 3}
   - {fileID: 1515309117289986882, guid: ee0a04db1cefcf54bb3003125bb671a9, type: 3}
+  - {fileID: 2777981255938634389, guid: 2429b0a3e6785a044b1033ce458c8bc3, type: 3}
+  - {fileID: 2777981255938634389, guid: bcd6c5f351f05ab47a37f8b844240b66, type: 3}
+  - {fileID: 4569864361843860657, guid: ba3b14a04526aa7468124f2e54294e47, type: 3}
   leftRooms:
   - {fileID: 1515309117289986882, guid: f169f1bf792aa9c4db692f02a22c07b0, type: 3}
   - {fileID: 4571500341309707636, guid: 485e824945dd7e44cb3841206e1e1a82, type: 3}
@@ -3933,6 +3938,10 @@ MonoBehaviour:
   - {fileID: 6559122597976736462, guid: 263f40111a1a19c49857bb019586314f, type: 3}
   - {fileID: 6559122597976736462, guid: cc2d5d9e7b638b74bb22ada6f9f4c2e4, type: 3}
   - {fileID: 1515309117289986882, guid: ee0a04db1cefcf54bb3003125bb671a9, type: 3}
+  - {fileID: 6559122597976736462, guid: 0ed7b03ac9770864182f144e29465e8a, type: 3}
+  - {fileID: 6559122597976736462, guid: d8c700adb7c4fd54ca176eadff5055f8, type: 3}
+  - {fileID: 6559122597976736462, guid: 68af47e5026d29d41b690de8e4d46b95, type: 3}
+  - {fileID: 6559122597976736462, guid: 0ed7b03ac9770864182f144e29465e8a, type: 3}
   rightRooms:
   - {fileID: 4569864361843860657, guid: d711e68fb0c93bd49933909d5f44cd0c, type: 3}
   - {fileID: 5905176332694208105, guid: fade2a17fa633714a821a9885513801b, type: 3}
@@ -3943,6 +3952,11 @@ MonoBehaviour:
   - {fileID: 6559122597976736462, guid: 68af47e5026d29d41b690de8e4d46b95, type: 3}
   - {fileID: 6559122597976736462, guid: cc2d5d9e7b638b74bb22ada6f9f4c2e4, type: 3}
   - {fileID: 5905176332694208105, guid: a4a20662f5cda0b4ea2bd12c3e8ee28b, type: 3}
+  - {fileID: 6559122597976736462, guid: 0ed7b03ac9770864182f144e29465e8a, type: 3}
+  - {fileID: 4569864361843860657, guid: ba3b14a04526aa7468124f2e54294e47, type: 3}
+  - {fileID: 6559122597976736462, guid: d8c700adb7c4fd54ca176eadff5055f8, type: 3}
+  - {fileID: 6559122597976736462, guid: 68af47e5026d29d41b690de8e4d46b95, type: 3}
+  - {fileID: 6559122597976736462, guid: 0ed7b03ac9770864182f144e29465e8a, type: 3}
   closedRoom: {fileID: 2777981255938634389, guid: 642c8fcbb60f4764b97de99a348470e8,
     type: 3}
   rooms: []
@@ -4012,7 +4026,7 @@ PrefabInstance:
     - target: {fileID: 167313187771439157, guid: 79b436974ff30294f8cf95033944ea0b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 167313187771439157, guid: 79b436974ff30294f8cf95033944ea0b,
         type: 3}
