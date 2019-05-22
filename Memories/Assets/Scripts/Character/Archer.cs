@@ -5,6 +5,7 @@ using UnityEngine;
 public class Archer : PlayerBase
 {
     private GameObject projectile;
+    public int damageAbility;
     public float projectileForce;
     private float timeBtwAttack;
     public float startTimeBtwAttack;
@@ -14,6 +15,7 @@ public class Archer : PlayerBase
 		TakeInput ();
 		Move ();
         Attack();
+        ArrowAbility();
     }
 
     protected override void Attack()
@@ -27,9 +29,9 @@ public class Archer : PlayerBase
                 Vector2 mousePos = UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 myPos = transform.position;
                 Vector2 direction = (mousePos - myPos).normalized;
-                GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
-                spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
-                spell.GetComponent<Projectile>().damage = Random.Range(minDamage, maxDamage);
+                GameObject arrow = Instantiate(projectile, transform.position, Quaternion.identity);
+                arrow.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+                arrow.GetComponent<Projectile>().damage = Random.Range(minDamage, maxDamage);
                 timeBtwAttack = startTimeBtwAttack;
             }
         } else {
@@ -37,8 +39,18 @@ public class Archer : PlayerBase
         }
     }
 
-    void SpawnSummons()
+    void ArrowAbility()
     {
-        
+        if (Input.GetKeyDown(KeyCode.F) && Time.timeScale == 1)
+        {
+            if (!GameObject.FindGameObjectWithTag("GOManager")) return;
+            projectile = GameObject.FindGameObjectWithTag("GOManager").GetComponent<GOManager>().bullet[4];
+            Vector2 mousePos = UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 myPos = transform.position;
+            Vector2 direction = (mousePos - myPos).normalized;
+            GameObject arrowAbility = Instantiate(projectile, transform.position, Quaternion.identity);
+            arrowAbility.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+            arrowAbility.GetComponent<Projectile>().damage = damageAbility;
+        }  
     }
 }
