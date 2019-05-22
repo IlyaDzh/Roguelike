@@ -91,16 +91,21 @@ public class Sword : PlayerBase
             Speed = 2.5f;
         }
         if (energy >= 100) energy = 100;
-        if (energy <= 0) energy = 0;
-        if (energy == 10 && Input.GetKey(KeyCode.Space)) energy = 0;
+        if ((energy == 10 && Input.GetKey(KeyCode.Space)) || energy <= 0) energy = 0;
     }
 
     void Armor()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (timeBtwUseSpell <= 0)
         {
-            PlayerStats.armor = 0.5f;
-            Instantiate(armorFX, transform.position, Quaternion.identity);
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                PlayerStats.armor = 0.5f;
+                Instantiate(armorFX, transform.position, Quaternion.identity);
+                timeBtwUseSpell = startTimeBtwUseSpell;
+            }
+        } else {
+            timeBtwUseSpell -= Time.deltaTime;
         }
     }
 

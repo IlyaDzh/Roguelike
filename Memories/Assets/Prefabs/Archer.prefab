@@ -183,6 +183,7 @@ MonoBehaviour:
   Speed: 3.5
   minDamage: 20
   maxDamage: 35
+  startTimeBtwUseSpell: 5
   damageAbility: 190
   projectileForce: 10
   startTimeBtwAttack: 0.22

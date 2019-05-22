@@ -35,11 +35,17 @@ public class Wizard : PlayerBase
 
     void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (timeBtwUseSpell <= 0)
         {
-            Destroy(Instantiate(teleportFX, transform.position, Quaternion.identity), 1f);
-            transform.Translate(direction * 1.75f);
-        }  
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Destroy(Instantiate(teleportFX, transform.position, Quaternion.identity), 1f);
+                transform.Translate(direction * 1.75f);
+                timeBtwUseSpell = startTimeBtwUseSpell;
+            }  
+        } else {
+            timeBtwUseSpell -= Time.deltaTime;
+        }
     }
 
     void SwapProjectile()

@@ -184,6 +184,7 @@ MonoBehaviour:
   Speed: 2.5
   minDamage: 40
   maxDamage: 60
+  startTimeBtwUseSpell: 10
   startTimeBtwAttack: 0.2
   attackPos: {fileID: 2900764082396187853}
   whatIsEnemies:

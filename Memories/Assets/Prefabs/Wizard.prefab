@@ -183,6 +183,7 @@ MonoBehaviour:
   Speed: 3
   minDamage: 30
   maxDamage: 55
+  startTimeBtwUseSpell: 5
   projectileForce: 6
   numberBullet: 0
   teleportFX: {fileID: 1772973310476100443, guid: f5c32f236109fd4439cd367211037508,

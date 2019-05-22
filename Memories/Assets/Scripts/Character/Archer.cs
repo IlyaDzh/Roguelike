@@ -41,16 +41,22 @@ public class Archer : PlayerBase
 
     void ArrowAbility()
     {
-        if (Input.GetKeyDown(KeyCode.F) && Time.timeScale == 1)
+        if (timeBtwUseSpell <= 0)
         {
-            if (!GameObject.FindGameObjectWithTag("GOManager")) return;
-            projectile = GameObject.FindGameObjectWithTag("GOManager").GetComponent<GOManager>().bullet[4];
-            Vector2 mousePos = UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 myPos = transform.position;
-            Vector2 direction = (mousePos - myPos).normalized;
-            GameObject arrowAbility = Instantiate(projectile, transform.position, Quaternion.identity);
-            arrowAbility.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
-            arrowAbility.GetComponent<Projectile>().damage = damageAbility;
-        }  
+            if (Input.GetKeyDown(KeyCode.F) && Time.timeScale == 1)
+            {
+                if (!GameObject.FindGameObjectWithTag("GOManager")) return;
+                projectile = GameObject.FindGameObjectWithTag("GOManager").GetComponent<GOManager>().bullet[4];
+                Vector2 mousePos = UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 myPos = transform.position;
+                Vector2 direction = (mousePos - myPos).normalized;
+                GameObject arrowAbility = Instantiate(projectile, transform.position, Quaternion.identity);
+                arrowAbility.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+                arrowAbility.GetComponent<Projectile>().damage = damageAbility;
+                timeBtwUseSpell = startTimeBtwUseSpell;
+            }  
+        } else {
+            timeBtwUseSpell -= Time.deltaTime;
+        }
     }
 }

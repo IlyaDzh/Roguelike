@@ -16,6 +16,8 @@ public abstract class PlayerBase : MonoBehaviour
 	private Animator animator;
     private Rigidbody2D rb;
     private Text txt;
+    protected float timeBtwUseSpell;
+    public float startTimeBtwUseSpell;
 
     void Start() 
     {
