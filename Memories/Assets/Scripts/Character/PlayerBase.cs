@@ -7,7 +7,7 @@ public abstract class PlayerBase : MonoBehaviour
 {
     public GameObject coinText;
     public GameObject hpFX;
-    [Header("Характеристика героя")]
+    [Header("Характеристики героя")]
     public float Speed;
     protected int damage;
     public int minDamage;
@@ -18,11 +18,14 @@ public abstract class PlayerBase : MonoBehaviour
     private Text txt;
     protected float timeBtwUseSpell;
     public float startTimeBtwUseSpell;
+    protected Image imageCooldown;
+    protected bool isCooldown;
 
     void Start() 
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        imageCooldown = GameObject.FindGameObjectWithTag("Cooldown").GetComponent<Image>();
         txt = GameObject.FindGameObjectWithTag("NumberCoins").GetComponent<Text>();  
         Time.timeScale = 1; 
         PlayerStats.armor = 1f;
@@ -93,4 +96,15 @@ public abstract class PlayerBase : MonoBehaviour
     }
 
     protected abstract void Attack();
+
+    protected void StartCooldown(float cooldown)
+    {
+        imageCooldown.fillAmount += 1 / cooldown * Time.deltaTime;
+
+        if (imageCooldown.fillAmount >= 1)
+        {
+            imageCooldown.fillAmount = 0;
+            isCooldown = false;
+        }
+    }
 }

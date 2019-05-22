@@ -98,14 +98,20 @@ public class Sword : PlayerBase
     {
         if (timeBtwUseSpell <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F) && Time.timeScale == 1)
             {
+                isCooldown = true;
                 PlayerStats.armor = 0.5f;
                 Instantiate(armorFX, transform.position, Quaternion.identity);
                 timeBtwUseSpell = startTimeBtwUseSpell;
             }
         } else {
             timeBtwUseSpell -= Time.deltaTime;
+        }
+
+        if (isCooldown)
+        {
+            StartCooldown(10);
         }
     }
 

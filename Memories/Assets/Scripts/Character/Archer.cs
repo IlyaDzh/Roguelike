@@ -45,7 +45,7 @@ public class Archer : PlayerBase
         {
             if (Input.GetKeyDown(KeyCode.F) && Time.timeScale == 1)
             {
-                if (!GameObject.FindGameObjectWithTag("GOManager")) return;
+                isCooldown = true;
                 projectile = GameObject.FindGameObjectWithTag("GOManager").GetComponent<GOManager>().bullet[4];
                 Vector2 mousePos = UnityEngine.Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 myPos = transform.position;
@@ -57,6 +57,11 @@ public class Archer : PlayerBase
             }  
         } else {
             timeBtwUseSpell -= Time.deltaTime;
+        }
+
+        if (isCooldown)
+        {
+            StartCooldown(5);
         }
     }
 }
