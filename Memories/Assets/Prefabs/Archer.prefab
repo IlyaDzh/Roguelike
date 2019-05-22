@@ -181,9 +181,10 @@ MonoBehaviour:
     type: 3}
   hpFX: {fileID: 8718134989483756469, guid: 1f14c3df0812b4f42a66d3c933c71795, type: 3}
   Speed: 3.5
-  minDamage: 10
-  maxDamage: 20
+  minDamage: 20
+  maxDamage: 35
   projectileForce: 10
+  startTimeBtwAttack: 0.22
 --- !u!114 &8861312326895560810
 MonoBehaviour:
   m_ObjectHideFlags: 0
