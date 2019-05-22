@@ -183,6 +183,7 @@ MonoBehaviour:
   Speed: 3.5
   minDamage: 10
   maxDamage: 20
+  projectileForce: 10
 --- !u!114 &8861312326895560810
 MonoBehaviour:
   m_ObjectHideFlags: 0
