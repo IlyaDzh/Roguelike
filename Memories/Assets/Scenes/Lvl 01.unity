@@ -787,6 +787,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d048b82522ca7ec498b76ae8c68a88a3, type: 3}
   myImg: {fileID: 679365874}
   numberBottleText: {fileID: 1483555120}
+  numberCoins: {fileID: 805268361}
 --- !u!1 &344532807
 GameObject:
   m_ObjectHideFlags: 0

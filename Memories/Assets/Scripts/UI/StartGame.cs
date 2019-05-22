@@ -13,6 +13,7 @@ public class StartGame : MonoBehaviour
     public Sprite[] img;
     public GameObject myImg;
     public Text numberBottleText;
+    public Text numberCoins;
 
 
     void Awake() 
@@ -35,6 +36,7 @@ public class StartGame : MonoBehaviour
                 break;
         }
         numberBottleText.text = PlayerStats.numberOfBottle.ToString();
+        numberCoins.text = PlayerStats.coins.ToString();
     }
 
     void Update()
@@ -63,7 +65,7 @@ public class StartGame : MonoBehaviour
 
     public void RestartGame()
     {
-        PlayerStats.numberOfBottle = 0;
+        StatsNull();
         if (GameObject.FindGameObjectWithTag("Player"))
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -71,7 +73,7 @@ public class StartGame : MonoBehaviour
 
     public void BackToMenu()
     {
-        PlayerStats.numberOfBottle = 0;
+        StatsNull();   
         SceneManager.LoadScene("Menu");
     }
 
@@ -89,5 +91,11 @@ public class StartGame : MonoBehaviour
     public void UpdateBottleNumber()
     {
         numberBottleText.text = PlayerStats.numberOfBottle.ToString();
+    }
+
+    void StatsNull()
+    {
+        PlayerStats.numberOfBottle = 0;
+        PlayerStats.coins = 0;
     }
 }
