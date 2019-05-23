@@ -7,4 +7,4 @@ Sword:
 Wizard:
     F - Dash
 Archer:
-    F - Create summons
+    F - Arrow

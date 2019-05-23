@@ -260,7 +260,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -541,37 +541,51 @@ MonoBehaviour:
   sounds:
   - name: BGMusic
     clip: {fileID: 8300000, guid: 9727e1bad9c33df4ca7f254d34140066, type: 3}
-    volume: 0.1
+    addMixer: {fileID: 243830263597689706, guid: 72676a6450d2d8349b2d5951ca7c4a62,
+      type: 2}
+    volume: 1
     loop: 1
     source: {fileID: 0}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: 15d61db097271d44e9a21d1475b25388, type: 3}
-    volume: 0.4
+    addMixer: {fileID: 243367729425611752, guid: 72676a6450d2d8349b2d5951ca7c4a62,
+      type: 2}
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: EnemyDeath
     clip: {fileID: 8300000, guid: e8874545e252cf14a9d3feec4fdd1c3b, type: 3}
-    volume: 0.25
+    addMixer: {fileID: 243367729425611752, guid: 72676a6450d2d8349b2d5951ca7c4a62,
+      type: 2}
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Jar
     clip: {fileID: 8300000, guid: 2eb10a4a805c8004b9a897dc30dd3da3, type: 3}
-    volume: 0.35
+    addMixer: {fileID: 243367729425611752, guid: 72676a6450d2d8349b2d5951ca7c4a62,
+      type: 2}
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: AttackSword1
     clip: {fileID: 8300000, guid: c573f3bf72e5dde47b0c21f961915017, type: 3}
-    volume: 0.35
+    addMixer: {fileID: 243367729425611752, guid: 72676a6450d2d8349b2d5951ca7c4a62,
+      type: 2}
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: AttackSword2
     clip: {fileID: 8300000, guid: 665690c51b6310f4abf6ee3fcbe6f500, type: 3}
-    volume: 0.35
+    addMixer: {fileID: 243367729425611752, guid: 72676a6450d2d8349b2d5951ca7c4a62,
+      type: 2}
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Coin
     clip: {fileID: 8300000, guid: 65dfded486964814e936266bfee88c65, type: 3}
-    volume: 0.35
+    addMixer: {fileID: 243367729425611752, guid: 72676a6450d2d8349b2d5951ca7c4a62,
+      type: 2}
+    volume: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &477385931
@@ -1029,7 +1043,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1162,6 +1176,7 @@ GameObject:
   - component: {fileID: 1177912812}
   - component: {fileID: 1177912811}
   - component: {fileID: 1177912815}
+  - component: {fileID: 1177912816}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1267,6 +1282,21 @@ MonoBehaviour:
   hero: {fileID: 0}
   slider: {fileID: 0}
   loadingText: {fileID: 0}
+--- !u!114 &1177912816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177912810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615f7ed721e8be044a44c6d9bbdae3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 72676a6450d2d8349b2d5951ca7c4a62, type: 2}
+  musicSlider: {fileID: 1200691771}
+  sfxSlider: {fileID: 1645545932}
 --- !u!1 &1182888538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,13 +1537,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 853024882}
   m_HandleRect: {fileID: 2019493640}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177912816}
+        m_MethodName: SetVolumeMusic
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1245620145
@@ -2040,13 +2081,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 159193075}
   m_HandleRect: {fileID: 1713335860}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177912816}
+        m_MethodName: SetVolumeSFX
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1673796548
@@ -2210,8 +2262,8 @@ RectTransform:
   m_Father: {fileID: 126132404}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2503,8 +2555,8 @@ RectTransform:
   m_Father: {fileID: 640438488}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
