@@ -172,7 +172,7 @@ MonoBehaviour:
   damage: 0.1
   maxDrop: 4
   seeDistance: 3.8
-  attackDistance: 0.9
+  attackDistance: 1
   startWaitTime: 3
   startWaitTime2: 2
 --- !u!1001 &6680814851627495800

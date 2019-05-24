@@ -9,6 +9,7 @@ public class BottleHP : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Take_HP");
             PlayerStats.numberOfBottle++;
             GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<StartGame>().UpdateBottleNumber();
             Destroy(gameObject);

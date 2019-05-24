@@ -588,6 +588,20 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: Take_HP
+    clip: {fileID: 8300000, guid: 2cb7401427913464ebb5f3b85004dc83, type: 3}
+    addMixer: {fileID: 243367729425611752, guid: 72676a6450d2d8349b2d5951ca7c4a62,
+      type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Use_HP
+    clip: {fileID: 8300000, guid: de94036c536eacf40bad9a2743b9c409, type: 3}
+    addMixer: {fileID: 243367729425611752, guid: 72676a6450d2d8349b2d5951ca7c4a62,
+      type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &477385931
 Transform:
   m_ObjectHideFlags: 0

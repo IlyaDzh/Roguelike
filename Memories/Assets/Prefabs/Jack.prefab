@@ -169,10 +169,10 @@ MonoBehaviour:
   sl: {fileID: 812448235151940898}
   HP: 180
   speed: 1.7
-  damage: 0.09
+  damage: 0.14
   maxDrop: 5
   seeDistance: 3.8
-  attackDistance: 0.9
+  attackDistance: 1
   startWaitTime: 3
   startWaitTime2: 2
 --- !u!1001 &3445730133582941210

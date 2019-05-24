@@ -169,7 +169,7 @@ MonoBehaviour:
   sl: {fileID: 812448235151940898}
   HP: 100
   speed: 1.4
-  damage: 8
+  damage: 9
   maxDrop: 5
   seeDistance: 4.2
   stopDistance: 3.2

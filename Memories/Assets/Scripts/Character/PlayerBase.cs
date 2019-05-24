@@ -87,6 +87,7 @@ public abstract class PlayerBase : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) && PlayerStats.numberOfBottle > 0 && Time.deltaTime != 0)
         {
+            FindObjectOfType<AudioManager>().Play("Use_HP");
             PlayerStats.numberOfBottle--;
             GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<StartGame>().UpdateBottleNumber();
             Vector2 hpPosition = new Vector2(transform.position.x, transform.position.y + 0.25f);
