@@ -28,6 +28,7 @@ public abstract class PlayerBase : MonoBehaviour
         imageCooldown = GameObject.FindGameObjectWithTag("Cooldown").GetComponent<Image>();
         txt = GameObject.FindGameObjectWithTag("NumberCoins").GetComponent<Text>();  
         Time.timeScale = 1; 
+        Boss.bossDeath = false;
         PlayerStats.armor = 1f;
     }
 
@@ -106,6 +107,14 @@ public abstract class PlayerBase : MonoBehaviour
         {
             imageCooldown.fillAmount = 0;
             isCooldown = false;
+        }
+    }
+
+    protected void TestQ()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            transform.Translate(direction * 3f);
         }
     }
 }

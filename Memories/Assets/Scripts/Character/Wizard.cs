@@ -16,6 +16,7 @@ public class Wizard : PlayerBase
         Attack();
         SwapProjectile();
         Dash();
+        TestQ();
     }
 
     protected override void Attack()

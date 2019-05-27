@@ -21,6 +21,7 @@ public class Sword : PlayerBase
         Attack();
         Energy();
         Armor();
+        TestQ();
     }
 
     protected override void TakeInput()

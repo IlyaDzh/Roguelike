@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
     public GameObject death;
+    public GameObject end;
     public GameObject pause;
     public GameObject map;
     public GameObject abilityPanel;
@@ -61,6 +62,17 @@ public class StartGame : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
+        if (Boss.bossDeath)
+        {
+            Invoke("ShowEndGame", 2f);
+        }
+    }
+
+    private void ShowEndGame()
+    {
+        map.SetActive(false);
+        abilityPanel.SetActive(false);
+        end.SetActive(true);
     }
 
     public void RestartGame()

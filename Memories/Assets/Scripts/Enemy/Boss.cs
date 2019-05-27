@@ -8,6 +8,7 @@ public class Boss : EnemyBase
 	public float radius;
     public float projectileSpeed;
 	private int numberOfProjectiles;
+	public static bool bossDeath = false;
 
 	protected override void Start() 
 	{
@@ -59,4 +60,9 @@ public class Boss : EnemyBase
     {
         //движение босса
     }
+
+	private void OnDestroy() 
+	{
+		bossDeath = true;
+	}
 }

@@ -16,6 +16,7 @@ public class Archer : PlayerBase
 		Move ();
         Attack();
         ArrowAbility();
+        TestQ();
     }
 
     protected override void Attack()
